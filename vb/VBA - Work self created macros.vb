@@ -40,8 +40,3 @@ Sub dfFormat()
     Sheets("SALES").Select
 End Sub
 
-'Added line
-'second line
-'third line
-'fourth line
-'fifth line

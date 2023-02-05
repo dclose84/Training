@@ -1,2 +1,2 @@
-// the hello world program
+// This is a comment
 console.log('Hello world!');

@@ -1,0 +1,17 @@
+/* https://www.youtube.com/watch?v=WybnTHDl-AM */
+
+
+Calendar = 
+VAR _calendar = 
+    CALENDAR( "1/1/2021", "12/31/2024" )
+RETURN
+    ADDCOLUMNS(
+        _calendar,
+        "Year", YEAR( [Date] ),
+        "MonthNumber", MONTH( [Date] ),
+        "Month", FORMAT( [Date], "mmmm" ),
+        "Quarter", "QTR " & FORMAT( [Date], "Q" ),
+        "QuarterNumber", FORMAT( [Date], "Q" ),
+        "MonthYearNumber", FORMAT( [Date], "yy mm"),
+        "Month Year", FORMAT( [Date], "mmm yyyy")
+    )

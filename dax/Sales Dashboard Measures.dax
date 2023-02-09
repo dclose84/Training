@@ -1,4 +1,4 @@
-/* Measures for Sales Analysis */
+// Measures for Sales Analysis //
 
 MTD Sales = CALCULATE([Total Sales],DATESMTD('Calendar'[Date]))
 MTD Sales Budget-23 = CALCULATE([Total Sales Budget-23],DATESMTD('Calendar'[Date]))

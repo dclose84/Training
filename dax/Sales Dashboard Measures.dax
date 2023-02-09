@@ -1,0 +1,15 @@
+/* Measures for Sales Analysis */
+
+MTD Sales = CALCULATE([Total Sales],DATESMTD('Calendar'[Date]))
+MTD Sales Budget-23 = CALCULATE([Total Sales Budget-23],DATESMTD('Calendar'[Date]))
+Previous 2-Year Sales = CALCULATE([Total Sales],DATEADD('Calendar'[Date],-2,YEAR))
+Previous Year Sales = CALCULATE([Total Sales],DATEADD('Calendar'[Date],-1,YEAR))
+QTD Sales = CALCULATE([Total Sales],DATESQTD('Calendar'[Date]))
+QTD Sales Budget-23 = CALCULATE([Total Sales Budget-23],DATESQTD('Calendar'[Date]))
+SalesVarianceTop25 = ([Total Sales]-[SamePeriod2022])
+SamePeriod2022 = CALCULATE([Total Sales], SAMEPERIODLASTYEAR('Calendar'[Date]))
+Total Sales = SUM(ORDER_HIST_LINE[EXTENSION])
+Total Sales Budget-23 = SUM('Budget-23'[Total Budget Revenue ($)])
+YTD Sales = Calculate ([Total Sales], DATESYTD('Calendar'[Date]))
+YTD Sales Budget-23 = CALCULATE([Total Sales Budget-23], DATESYTD('Calendar'[Date]))
+

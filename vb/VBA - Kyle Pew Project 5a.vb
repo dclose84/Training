@@ -2,28 +2,59 @@ VBA - Kyle Pew Project 4 (loops with logic)
 
 Sub LoopYearlyReport()
     Dim ws As Worksheet
+    Dim firstTime As Boolean
+    
+    firstTime = True
     
     For Each ws In Worksheets
         Worksheets(ws.Name).Select
         
-        InsertHeaders
-        FormatHeaders
-        AutomateTotalSUM
+        If ws.Name <> "YEARLY REPORT" Then
         
+            InsertHeaders
+            FormatHeaders
+            AutomateTotalSUM
+            
+            ' select current data
+            Range("A2").Select
+            Range(Selection, Selection.End(xlDown)).Select
+            Range(Selection, Selection.End(xlToRight)).Select
+            
+            ' copy data
+            Selection.Copy
+            
+            ' select yearly report
+            Worksheets("YEARLY REPORT").Select
+            
+            ' paste data
+            Range("A30000").Select
+            Selection.End(xlUp).Select
+            
+                If firstTime <> True Then
+                    ActiveCell.Offset(1, 0).Select
+                Else
+                    firstTime = False
+                End If
+            
+            ActiveSheet.Paste
+            
+        End If
+    ' move to the next sheet in the loop
     Next ws
+    
+    Worksheets("YEARLY REPORT").Select
+    InsertHeaders
+    FormatHeaders
+    AutomateTotalSUM
+    
 End Sub
-
-
-
-
-
 
 Public Sub AutomateTotalSUM()
     Dim lastCell As String
     Dim ws As Worksheet
 
-    For Each ws In Worksheets
-        Worksheets(ws.Name).Select
+    'For Each ws In Worksheets
+        'Worksheets(ws.Name).Select
         
         Range("F2").Select
         
@@ -34,7 +65,7 @@ Public Sub AutomateTotalSUM()
         ActiveCell.Offset(1, 0).Select
         
         ActiveCell.Value = "=sum(F2:" & lastCell & ")"
-    Next ws
+    'Next ws
 End Sub
 
 Sub InsertHeaders()

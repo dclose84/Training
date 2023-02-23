@@ -249,10 +249,28 @@ Sub FormatForecastReport()
         "=XLOOKUP(TRIM([@Part]),TRIM(Inv_Ext_Status[Part]),Inv_Ext_Status[PL],FIX PL)"
     Range("L2").Select
     ActiveCell.Formula2R1C1 = _
-        "=XLOOKUP(TRIM([@Part]),TRIM(Inv_Ext_Status[Part]),Inv_Ext_Status[Price],FIX LIST PRICE)"
+        "=XLOOKUP(TRIM([@Part]),TRIM(Inv_Ext_Status[Part]),Inv_Ext_Status[Price],0)"
     Range("M2").Select
     ActiveCell.FormulaR1C1 = _
-        "=[@Quantity]*[@[Unit Price]]"
+        "=IFERROR([@Quantity]*[@[Unit Price]],0)"
+    
+    ' Conditional format to highlight blanks (0's)
+    Range("L2").Select
+    Range(Selection, Selection.End(xlDown)).Select
+    Range("Forecast_Summary[[Unit Price]:[Extension]]").Select
+    Selection.FormatConditions.Add Type:=xlCellValue, Operator:=xlEqual, _
+        Formula1:="=0"
+    Selection.FormatConditions(Selection.FormatConditions.Count).SetFirstPriority
+    With Selection.FormatConditions(1).Font
+        .Color = -16383844
+        .TintAndShade = 0
+    End With
+    With Selection.FormatConditions(1).Interior
+        .PatternColorIndex = xlAutomatic
+        .Color = 13551615
+        .TintAndShade = 0
+    End With
+    Selection.FormatConditions(1).StopIfTrue = False
     
     '
     ' This is the part to paste in forecast summary into Daily Flash Tab
@@ -361,3 +379,5 @@ Sub FormatForecastReport()
     
     ' Tada!
 End Sub
+
+

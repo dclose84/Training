@@ -6,7 +6,10 @@ Public Sub ImportTextFile()
     Dim OpenFiles() As Variant
     Dim i As Integer
     
-    OpenFiles = Application.GetOpenFilename(Title:="Select File(s) to Import", MultiSelect:=True)
+    OpenFiles = GetFiles()
+    
+    ' this prevents the screen flicker associated with open/closing files, and is turned back on at the end
+    Application.ScreenUpdating = False
     
     ' create the loop
     For i = 1 To Application.CountA(OpenFiles)
@@ -29,4 +32,11 @@ Public Sub ImportTextFile()
         ' close out the text file that was created
         TextFile.Close
     Next i
+    
+    Application.ScreenUpdating = True
 End Sub
+
+Public Function GetFiles() As Variant
+    ' This creates the previous OpenFiles sub procedure as a function so this is reuseable
+     GetFiles = Application.GetOpenFilename(Title:="Select File(s) to Import", MultiSelect:=True)
+End Function

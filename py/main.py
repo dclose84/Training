@@ -10,3 +10,8 @@
 # input() will get user input in console
 # Then print() will print the word "Hello" and the user input
 print("Hello " + input("What is your name?"))
+
+# After inputting your name, it will print the number of characters in the string that is your name
+s = input("What is your name?")
+print(len(s))
+

@@ -16,3 +16,12 @@ print(123_456_789)
 #Boolean, true or false
 True
 False
+
+#typeerrors, can't put a rock through a fry machine, 
+# num_char = len(input("What is your name?"))
+# new_num_char = str(num_char)
+# #print("Your name has" + num_char + "characters."))
+# #print(type(num_char))
+# print("Your name has" + new_num_char + "characters."))
+a = str(123)
+print(type(a))

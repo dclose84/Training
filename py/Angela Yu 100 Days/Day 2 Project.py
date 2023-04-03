@@ -26,16 +26,32 @@ False
 a = str(123)
 print(type(a))
 
-# 2.1
+#mathematical
+3 + 5
+7 - 4
+3 * 2
+#division will print as float (6 / 3 = 2.0)
+6 / 3
+# exponents, 2 to the power of 2
+2 ** 2 
+
+# PEMDAS
+# () Parentheses
+# ** Exponents
+# * Multiplication
+# / Division
+# + Addition
+# - Subtraction
+
+#2.2
 # 🚨 Don't change the code below 👇
-two_digit_number = input("Type a two digit number: ")
+height = input("enter your height in m: ")
+weight = input("enter your weight in kg: ")
 # 🚨 Don't change the code above 👆
 
-####################################
 #Write your code below this line 👇
-print(int(two_digit_number[0]) + int(two_digit_number[1]))
-# suggested, 
-# first_digit = int(two_digit_number[0])
-# second_digit = int(two_digit_number[1])
-# final_number = second_digit + first_digit
-# print(two_digit_number)
+height = float(height)
+weight = float(weight)
+bmi = (weight / (height ** 2))
+bmi_as_int = int(bmi)
+print(bmi_as_int)

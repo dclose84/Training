@@ -55,3 +55,50 @@ weight = float(weight)
 bmi = (weight / (height ** 2))
 bmi_as_int = int(bmi)
 print(bmi_as_int)
+
+# to round, use round function
+print(round(8/3))
+
+# floor division
+print(8 // 3)
+
+score = 0
+# user scores a goal
+score += 1
+print(score)
+
+# f-strings
+score = 0
+
+# for mixing types in a concat
+print("your score is " + str(score))
+
+score = 0
+height = 1.8
+isWinning = True
+#instead can f-string 
+print(f"your score is {score}, your height is {height}, you are winning is {isWinning}")
+
+#2.3
+# 🚨 Don't change the code below 👇
+age = input("What is your current age? ")
+# 🚨 Don't change the code above 👆
+
+#Write your code below this line 👇
+
+x = (90*365) - (int(age) * 365)
+y = (90*52) - (int(age) * 52)
+z = (90*12) - (int(age) * 12)
+
+print(f"You have {x} days, {y}  weeks, and {z} months left")
+
+#suggested
+age_as_int = int(age)
+
+years_remaining = 90 - age_as_int
+days_remaining = years_remaining * 365
+weeks_remaining = years_remaining * 52
+months_remaining = years_remaining * 12
+
+print(f"You have {days_remaining} days, {weeks_remaining} weeks, {months_remaining} months left")
+

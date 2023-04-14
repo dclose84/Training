@@ -1,3 +1,4 @@
+# Day 1, console, inputs, debugging, variable naming
 # This is a comment
 # == Equal to 2==2 True
 # != Not equal to 4!=4 Fale

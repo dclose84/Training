@@ -1,4 +1,4 @@
-# Conditional / If Else
+# Conditional / If Else, nested if elif statements, multiple if statements, logical operators
 water_level = 50
 if water_level > 80:
     print("Drain water")

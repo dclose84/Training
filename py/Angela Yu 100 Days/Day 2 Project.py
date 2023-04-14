@@ -1,4 +1,4 @@
-#Data Types
+#Data Types, type error, type checking conversion, mathematical operations, number manipulation and f strings
 
 #String "", [] subscript -> will index/position , 0 = first letter in the string. Below will print the H in Hello
 print("Hello"[4])

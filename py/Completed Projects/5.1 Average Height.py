@@ -1,10 +1,4 @@
-#Day 5.1, Python Loops
-fruits = ["Apple", "Peach", "Pear"]
-for fruit in fruits:
-    print(fruit + " Pie")
-print(fruits)
-
-#5.1 Average Height
+#5.1 Average Height (for, if [can't use sum/len])
 # 🚨 Don't change the code below 👇
 student_heights = input("Input a list of student heights ").split()
 for n in range(0, len(student_heights)):
@@ -28,4 +22,3 @@ for student in student_heights:
 
 average_height = total_height / number_of_students
 print(round(average_height))
-

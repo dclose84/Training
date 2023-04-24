@@ -1,3 +1,4 @@
+#5.2 Highest Score (no min/max)
 # 🚨 Don't change the code below 👇
 student_scores = input("Input a list of student scores ").split()
 for n in range(0, len(student_scores)):

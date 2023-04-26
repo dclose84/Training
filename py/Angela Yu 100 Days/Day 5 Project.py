@@ -74,3 +74,27 @@ for number in range(1,101):
 print(total_even2)
 
 #55 (5.4) The FizzBuzz Job Interview Question
+fb = 0
+for number in range (1,101):
+    fb += 1
+    if number % 15 == 0:
+        print("FizzBuzz")
+    elif number % 5 == 0:
+        print("Buzz")
+    elif number % 3 == 0:
+        print("Fizz")
+    else:
+        print(fb)
+
+#suggested:        
+for number in range(1,101):
+    if number % 3 == 0 and number % 5 == 0:
+         print("FizzBuzz")
+    elif number % 5 == 0:
+        print("Buzz")
+    elif number % 3 == 0:
+        print("Fizz")
+    else:
+        print(number)
+
+#56 Final Project

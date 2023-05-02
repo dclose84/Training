@@ -19,3 +19,23 @@ turn_left()
 move()
 turn_left()
 move()
+
+#60,
+def turn_right():
+    turn_left()
+    turn_left()
+    turn_left()
+
+def hurdle():
+    move()
+    turn_left()
+    move()
+    turn_right()
+    move()
+    turn_right()
+    move()
+    turn_left()
+    
+#instead of calling hurdle() 6 times, make a FOR loop with RANGE
+for step in range(6):
+    hurdle()

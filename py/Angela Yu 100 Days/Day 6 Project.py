@@ -65,3 +65,24 @@ while at_goal() != True:
 # While loops can be infinite and is an issue (infinite loops)
 
 #63 While loops advanced
+def turn_right():
+    turn_left()
+    turn_left()
+    turn_left()
+
+def scale():
+    turn_left()
+    move()
+    turn_right()
+    move()
+    turn_right()
+    move()
+    turn_left()
+
+while at_goal() != True:
+    if front_is_clear() == True:
+        move()
+    elif wall_in_front() == True:
+        scale()
+        
+#64 Hurdles Challenge using While Loops

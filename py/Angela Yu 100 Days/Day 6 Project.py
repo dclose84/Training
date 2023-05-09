@@ -133,3 +133,18 @@ while at_goal() != True:
         move()
 
 #65 Final Project: Escaping the Maze
+def turn_right():
+    turn_left()
+    turn_left()
+    turn_left()
+    
+while at_goal() != True:
+    if front_is_clear():
+        move()
+    elif wall_in_front():
+        if right_is_clear():
+            turn_right()
+        else:
+            turn_left()
+    else:
+        turn_left()

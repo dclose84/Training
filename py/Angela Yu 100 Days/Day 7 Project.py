@@ -270,3 +270,4 @@ while not end_of_game:
 
     #TODO-2: - Import the stages from hangman_art.py and make this error go away.
     print(hangman_art.stages[lives])
+    

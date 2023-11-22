@@ -1,9 +1,76 @@
-<mxfile host="app.diagrams.net" modified="2023-11-21T23:53:03.625Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36 Edg/119.0.0.0" version="22.1.3" etag="O-SMKkegwTdUvFYPIHMm" type="github">
+<mxfile host="app.diagrams.net" modified="2023-11-22T00:02:36.591Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36 Edg/119.0.0.0" etag="rvoXtJNaXwVyNxjGTy5p" version="22.1.3" type="github">
   <diagram name="Page-1" id="l33B4il6V4JKGxfA662Z">
-    <mxGraphModel>
+    <mxGraphModel dx="1042" dy="639" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="aHdcCpO8DGhsh1TaFotd-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="aHdcCpO8DGhsh1TaFotd-1" target="aHdcCpO8DGhsh1TaFotd-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aHdcCpO8DGhsh1TaFotd-23" value="Need: Automatic WO generation drives demand by location" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="aHdcCpO8DGhsh1TaFotd-3">
+          <mxGeometry x="-0.1262" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aHdcCpO8DGhsh1TaFotd-1" value="SO/WO - Location 02" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="395" y="30" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="aHdcCpO8DGhsh1TaFotd-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="aHdcCpO8DGhsh1TaFotd-2" target="aHdcCpO8DGhsh1TaFotd-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aHdcCpO8DGhsh1TaFotd-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="aHdcCpO8DGhsh1TaFotd-2" target="aHdcCpO8DGhsh1TaFotd-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aHdcCpO8DGhsh1TaFotd-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="aHdcCpO8DGhsh1TaFotd-2" target="aHdcCpO8DGhsh1TaFotd-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aHdcCpO8DGhsh1TaFotd-22" value="Need: Inventory &amp;gt; Transactions &amp;gt; Inventory in Transit to be able to move material between facilities,&amp;nbsp;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="aHdcCpO8DGhsh1TaFotd-11">
+          <mxGeometry x="0.035" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aHdcCpO8DGhsh1TaFotd-2" value="Location 02 Level 1 BOM MJ" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="365" y="125" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="aHdcCpO8DGhsh1TaFotd-4" value="Location 02 Level 1 BOM MJ" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="165" y="125" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="aHdcCpO8DGhsh1TaFotd-6" value="Location 02 Level 1 BOM MJ" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="565" y="125" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="aHdcCpO8DGhsh1TaFotd-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="aHdcCpO8DGhsh1TaFotd-10" target="aHdcCpO8DGhsh1TaFotd-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aHdcCpO8DGhsh1TaFotd-15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="aHdcCpO8DGhsh1TaFotd-10" target="aHdcCpO8DGhsh1TaFotd-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aHdcCpO8DGhsh1TaFotd-17" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="aHdcCpO8DGhsh1TaFotd-10" target="aHdcCpO8DGhsh1TaFotd-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aHdcCpO8DGhsh1TaFotd-10" value="Location 01 Level 2 BOM MJ" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="365" y="265" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="aHdcCpO8DGhsh1TaFotd-12" value="Location 01 Level 2 BOM MS" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="165" y="265" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="aHdcCpO8DGhsh1TaFotd-14" value="Location 01 Level 2 BOM MJ" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="565" y="265" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="aHdcCpO8DGhsh1TaFotd-19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="aHdcCpO8DGhsh1TaFotd-16" target="aHdcCpO8DGhsh1TaFotd-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aHdcCpO8DGhsh1TaFotd-21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="aHdcCpO8DGhsh1TaFotd-16" target="aHdcCpO8DGhsh1TaFotd-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aHdcCpO8DGhsh1TaFotd-16" value="Location 01 Level 3 BOM Raw Material PS" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="365" y="405" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="aHdcCpO8DGhsh1TaFotd-18" value="Location 01 Level 3 BOM Raw Material PS" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="565" y="405" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="aHdcCpO8DGhsh1TaFotd-20" value="Location 01 Level 3 BOM Raw Material PS" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="165" y="405" width="120" height="60" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>

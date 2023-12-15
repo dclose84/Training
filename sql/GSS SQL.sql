@@ -192,3 +192,28 @@ ORDER BY ORDER_NO DESC
 SELECT * FROM "ORDER_HIST_LINE"
 WHERE COUNTRY_SHIP = ''
 ORDER BY CUSTOMER ASC
+
+SELECT * FROM "ORDER_HIST_LINE"
+WHERE COUNTRY_SHIP = 'USA' 
+AND STATE_SHIP NOT IN ('AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DC', 'DE', 'FL', 'GA', 'HI', 'ID', 'IL', 'IN', 'IA', 'KS', 'KY', 'LA', 'ME', 'MD', 'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'NE', 'NV', 'NH', 'NJ', 'NM', 'NY', 'NC', 'ND', 'OH', 'OK', 'OR', 'PA', 'RI', 'SC', 'SD', 'TN', 'TX', 'UT', 'VT', 'VA', 'WA', 'WV', 'WI', 'WY')
+ORDER BY CUSTOMER ASC
+
+UPDATE "ORDER_HIST_LINE"
+SET STATE_SHIP = 'OR'
+WHERE CUSTOMER = '82769'
+
+-- SAVED QUERIES
+SELECT * FROM "ORDER_SHIP_TO"
+WHERE (RECORD_NO = '  C' OR RECORD_NO = '  B') 
+AND (COUNTRY_SHIP = '' OR (COUNTRY_SHIP = 'USA' AND STATE_SHIP NOT IN ('AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DC', 'DE', 'FL', 'GA', 'HI', 'ID', 'IL', 'IN', 'IA', 'KS', 'KY', 'LA', 'ME', 'MD', 'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'NE', 'NV', 'NH', 'NJ', 'NM', 'NY', 'NC', 'ND', 'OH', 'OK', 'OR', 'PA', 'RI', 'SC', 'SD', 'TN', 'TX', 'UT', 'VT', 'VA', 'WA', 'WV', 'WI', 'WY')))
+ORDER BY CUSTOMER ASC
+
+--UPDATE "ORDER_SHIP_TO"
+--SET COUNTRY_SHIP = 'USA'
+--WHERE STATE_SHIP = 'TX' AND CUSTOMER = 'T20121'
+
+SELECT * FROM "ORDER_HIST_LINE"
+--CUSTOMER, ADDRESS_1_SHIP, ADDRESS_2_SHIP, STATE_SHIP, COUNTRY_SHIP from "ORDER_SHIP_TO"
+WHERE (COUNTRY_SHIP = 'USA' AND STATE_SHIP NOT IN ('AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DC', 'DE', 'FL', 'GA', 'HI', 'ID', 'IL', 'IN', 'IA', 'KS', 'KY', 'LA', 'ME', 'MD', 'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'NE', 'NV', 'NH', 'NJ', 'NM', 'NY', 'NC', 'ND', 'OH', 'OK', 'OR', 'PA', 'RI', 'SC', 'SD', 'TN', 'TX', 'UT', 'VT', 'VA', 'WA', 'WV', 'WI', 'WY'))
+OR COUNTRY_SHIP = ''
+ORDER BY CUSTOMER ASC

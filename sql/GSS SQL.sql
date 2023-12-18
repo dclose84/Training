@@ -217,3 +217,11 @@ SELECT * FROM "ORDER_HIST_LINE"
 WHERE (COUNTRY_SHIP = 'USA' AND STATE_SHIP NOT IN ('AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DC', 'DE', 'FL', 'GA', 'HI', 'ID', 'IL', 'IN', 'IA', 'KS', 'KY', 'LA', 'ME', 'MD', 'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'NE', 'NV', 'NH', 'NJ', 'NM', 'NY', 'NC', 'ND', 'OH', 'OK', 'OR', 'PA', 'RI', 'SC', 'SD', 'TN', 'TX', 'UT', 'VT', 'VA', 'WA', 'WV', 'WI', 'WY'))
 OR COUNTRY_SHIP = ''
 ORDER BY CUSTOMER ASC
+
+-- UPDATE CUSTOMER > SORT FOR INDUSTRY
+SELECT * FROM "CUSTOMER_SALES"
+WHERE REC = '2'
+
+UPDATE "CUSTOMER_SALES"
+SET C_SORT_1 = ""
+WHERE REC = '2' AND (CUSTOMER = '')

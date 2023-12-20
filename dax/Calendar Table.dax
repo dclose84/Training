@@ -16,3 +16,18 @@ RETURN
         "Month Year", FORMAT( [Date], "mmm yyyy")
     )
 
+
+CalendarTable = 
+ADDCOLUMNS (
+   CALENDAR (
+      MIN (ORDER_HIST_LINE[DATE_INVOICE]),
+      MAX (ORDER_HIST_LINE[DATE_INVOICE])
+   ),
+   "DateAsInteger", FORMAT([Date], "YYYYMMDD"),
+   "Year", YEAR([Date]),
+   "Month Number", MONTH([Date]),
+   "Month Name", FORMAT([Date], "MMMM"),
+   "Quarter", QUARTER([Date]),
+   "Day of Week", WEEKDAY([Date]),
+   "Year-Month", FORMAT([Date], "YYYY-MM")
+)

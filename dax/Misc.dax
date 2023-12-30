@@ -1,0 +1,5 @@
+// ORDER_HIST_LINE, categorize lines by type to extract PROGRESS
+if [LINE_TYPE] = "P" then "PROGRESS"
+else if [LINE_TYPE] = "S" then "STANDARD"
+else if [LINE_TYPE] = "F" then "FREIGHT"
+else null

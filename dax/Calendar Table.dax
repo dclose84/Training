@@ -31,3 +31,4 @@ ADDCOLUMNS (
    "Day of Week", WEEKDAY([Date]),
    "Year-Month", FORMAT([Date], "YYYY-MM")
 )
+

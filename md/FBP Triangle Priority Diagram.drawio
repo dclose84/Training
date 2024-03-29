@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-03-29T23:17:42.123Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36 Edg/122.0.0.0" etag="MwRLzY2FnsEDnPh2foOy" version="23.1.1" type="github">
+<mxfile host="app.diagrams.net" modified="2024-03-29T23:20:53.660Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36 Edg/122.0.0.0" etag="DAC9HGnfy1qPqSpEiCGV" version="23.1.1" type="github">
   <diagram id="6I0OCvxSQrVGMHxT2VVA" name="Page-1">
     <mxGraphModel dx="1666" dy="759" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -124,7 +124,7 @@
           <mxGeometry x="219" y="350" width="50" height="95" as="geometry" />
         </mxCell>
         <mxCell id="dKdSaXE48SgPbhcamS2K-63" value="Finance Business Partner - Objective Priority Map" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" parent="1" vertex="1">
-          <mxGeometry x="50" y="70" width="1590" height="40" as="geometry" />
+          <mxGeometry x="10" y="240" width="1590" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

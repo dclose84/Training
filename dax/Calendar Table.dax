@@ -1,5 +1,6 @@
 // https://www.youtube.com/watch?v=WybnTHDl-AM //
 
+= DateTimeZone.SwitchZone( DateTimeZone.UtcNow(),-7)
 
 Calendar = 
 VAR _calendar = 

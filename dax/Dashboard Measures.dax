@@ -1,7 +1,7 @@
 F-MTD Sales = 
 CALCULATE(
     [Total Sales],
-    TOPN(1, 'Calendar', 'Calendar'[UCT Fiscal Month], DESC))
+    TOPN(1, 'CalendarTable', 'CalendarTable'[UCT Fiscal Month], DESC))
 
 Diff  % = 
 DIVIDE(
@@ -11,14 +11,14 @@ DIVIDE(
 Current Month = 
 CALCULATE(
     [value],
-    TOPN(1, 'Calendar', 'Calendar'[UCT Fiscal Month], DESC))
+    TOPN(1, 'CalendarTable', 'CalendarTable'[UCT Fiscal Month], DESC))
 
 Previous Month = 
 CALCULATE(
     [value],
     FILTER(
-        'Calendar',
-        'Calendar'[UCT-FiscalMonth#] = MAX('Calendar'[UCT-FiscalMonth#]) - 1))
+        'CalendarTable',
+        'CalendarTable'[UCT-FiscalMonth#] = MAX('CalendarTable'[UCT-FiscalMonth#]) - 1))
 
 Inventory Snapshot Value = 
 SUMX(

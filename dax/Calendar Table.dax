@@ -1,5 +1,6 @@
 // https://www.youtube.com/watch?v=WybnTHDl-AM //
 
+// Last Refreshed
 = DateTimeZone.SwitchZone( DateTimeZone.UtcNow(),-7)
 
 Calendar = 
@@ -17,12 +18,12 @@ RETURN
         "Month Year", FORMAT( [Date], "mmm yyyy")
     )
 
-
+// Standard Calendar Table
 CalendarTable = 
 ADDCOLUMNS (
    CALENDAR (
-      MIN (ORDER_HIST_LINE[DATE_INVOICE]),
-      MAX (ORDER_HIST_LINE[DATE_INVOICE])
+      MIN (JOB_OPERATIONS[DATE COMPLETED]),
+      MAX (JOB_OPERATIONS[DATE COMPLETED])
    ),
    "DateAsInteger", FORMAT([Date], "YYYYMMDD"),
    "Year", YEAR([Date]),
@@ -30,6 +31,206 @@ ADDCOLUMNS (
    "Month Name", FORMAT([Date], "MMMM"),
    "Quarter", QUARTER([Date]),
    "Day of Week", WEEKDAY([Date]),
+   "Day", DAY([Date]),
    "Year-Month", FORMAT([Date], "YYYY-MM")
 )
+
+
+// Parent Fiscal
+
+FiscalWeek = 
+VAR FiscalYearStartDate = DATE(2022, 12, 31)
+VAR WeeksSinceStart = INT(([Date] - FiscalYearStartDate) / 7)
+RETURN
+    CalendarTable[FiscalYear] & "-W" & FORMAT(MOD(WeeksSinceStart, 52) + 1, "00")
+
+FiscalMonth = 
+CalendarTable[FiscalYear] & "-M" &
+SWITCH(
+    TRUE(),
+    //2022
+    [Date] >= DATE(2022,1,1) && [Date] <= DATE(2022,1,28), "01",
+    [Date] >= DATE(2022,1,29) && [Date] <= DATE(2022,2,25), "02",
+    [Date] >= DATE(2022,2,26) && [Date] <= DATE(2022,4,1), "03",
+    [Date] >= DATE(2022,4,2) && [Date] <= DATE(2022,4,29), "04",
+    [Date] >= DATE(2022,4,30) && [Date] <= DATE(2022,5,27), "05",
+    [Date] >= DATE(2022,5,28) && [Date] <= DATE(2022,7,1), "06",
+    [Date] >= DATE(2022,7,2) && [Date] <= DATE(2022,7,29), "07",
+    [Date] >= DATE(2022,7,30) && [Date] <= DATE(2022,8,26), "08",
+    [Date] >= DATE(2022,8,27) && [Date] <= DATE(2022,9,30), "09",
+    [Date] >= DATE(2022,10,1) && [Date] <= DATE(2022,10,28), "10",
+    [Date] >= DATE(2022,10,29) && [Date] <= DATE(2022,11,25), "11",
+    [Date] >= DATE(2022,11,26) && [Date] <= DATE(2022,12,30), "12",
+    //2023
+    [Date] >= DATE(2022,12,31) && [Date] <= DATE(2023,1,27), "01",
+    [Date] >= DATE(2023,1,28) && [Date] <= DATE(2023,2,24), "02",
+    [Date] >= DATE(2023,2,25) && [Date] <= DATE(2023,3,31), "03",
+    [Date] >= DATE(2023,4,1) && [Date] <= DATE(2023,4,28), "04",
+    [Date] >= DATE(2023,4,29) && [Date] <= DATE(2023,5,26), "05",
+    [Date] >= DATE(2023,5,27) && [Date] <= DATE(2023,6,30), "06",
+    [Date] >= DATE(2023,7,1) && [Date] <= DATE(2023,7,28), "07",
+    [Date] >= DATE(2023,7,29) && [Date] <= DATE(2023,8,25), "08",
+    [Date] >= DATE(2023,8,26) && [Date] <= DATE(2023,9,29), "09",
+    [Date] >= DATE(2023,9,30) && [Date] <= DATE(2023,10,27), "10",
+    [Date] >= DATE(2023,10,28) && [Date] <= DATE(2023,11,24), "11",
+    [Date] >= DATE(2023,11,25) && [Date] <= DATE(2023,12,29), "12",
+    //2024
+    [Date] >= DATE(2023,12,30) && [Date] <= DATE(2024,1,26), "01",
+    [Date] >= DATE(2024,1,27) && [Date] <= DATE(2024,2,23), "02",
+    [Date] >= DATE(2024,2,24) && [Date] <= DATE(2024,3,29), "03",
+    [Date] >= DATE(2024,3,30) && [Date] <= DATE(2024,4,26), "04",
+    [Date] >= DATE(2024,4,27) && [Date] <= DATE(2024,5,24), "05",
+    [Date] >= DATE(2024,5,25) && [Date] <= DATE(2024,6,28), "06",
+    [Date] >= DATE(2024,6,29) && [Date] <= DATE(2024,7,26), "07",
+    [Date] >= DATE(2024,7,27) && [Date] <= DATE(2024,8,23), "08",
+    [Date] >= DATE(2024,8,24) && [Date] <= DATE(2024,9,27), "09",
+    [Date] >= DATE(2024,9,28) && [Date] <= DATE(2024,10,25), "10",
+    [Date] >= DATE(2024,10,26) && [Date] <= DATE(2024,11,22), "11",
+    [Date] >= DATE(2024,11,23) && [Date] <= DATE(2024,12,27), "12",
+    //2025
+    [Date] >= DATE(2024,12,28) && [Date] <= DATE(2025,1,24), "01",
+    [Date] >= DATE(2025,1,25) && [Date] <= DATE(2025,2,21), "02",
+    [Date] >= DATE(2025,2,22) && [Date] <= DATE(2025,3,28), "03",
+    [Date] >= DATE(2025,3,29) && [Date] <= DATE(2025,4,25), "04",
+    [Date] >= DATE(2025,4,26) && [Date] <= DATE(2025,5,23), "05",
+    [Date] >= DATE(2025,5,24) && [Date] <= DATE(2025,6,27), "06",
+    [Date] >= DATE(2025,6,29) && [Date] <= DATE(2025,7,25), "07",
+    [Date] >= DATE(2025,7,26) && [Date] <= DATE(2025,8,22), "08",
+    [Date] >= DATE(2025,8,23) && [Date] <= DATE(2025,9,26), "09",
+    [Date] >= DATE(2025,9,27) && [Date] <= DATE(2025,10,24), "10",
+    [Date] >= DATE(2025,10,25) && [Date] <= DATE(2025,11,21), "11",
+    [Date] >= DATE(2025,11,22) && [Date] <= DATE(2025,12,26), "12",
+    //2026
+    [Date] >= DATE(2025,12,27) && [Date] <= DATE(2026,1,23), "01",
+    [Date] >= DATE(2026,1,24) && [Date] <= DATE(2026,2,20), "02",
+    [Date] >= DATE(2026,2,21) && [Date] <= DATE(2026,3,27), "03",
+    [Date] >= DATE(2026,3,28) && [Date] <= DATE(2026,4,24), "04",
+    [Date] >= DATE(2026,4,25) && [Date] <= DATE(2026,5,22), "05",
+    [Date] >= DATE(2026,5,23) && [Date] <= DATE(2026,6,26), "06",
+    [Date] >= DATE(2026,6,27) && [Date] <= DATE(2026,7,24), "07",
+    [Date] >= DATE(2026,7,25) && [Date] <= DATE(2026,8,21), "08",
+    [Date] >= DATE(2026,8,22) && [Date] <= DATE(2026,9,25), "09",
+    [Date] >= DATE(2026,9,26) && [Date] <= DATE(2026,10,23), "10",
+    [Date] >= DATE(2026,10,24) && [Date] <= DATE(2026,11,20), "11",
+    [Date] >= DATE(2026,11,21) && [Date] <= DATE(2027,01,01), "12",
+    BLANK()
+)
+
+
+FiscalMonthLong = 
+CalendarTable[FiscalYear] & "-" &
+SWITCH(
+    TRUE(),
+    //2022
+    [Date] >= DATE(2022,1,1) && [Date] <= DATE(2022,1,28), "January (4)",
+    [Date] >= DATE(2022,1,29) && [Date] <= DATE(2022,2,25), "February (4)",
+    [Date] >= DATE(2022,2,26) && [Date] <= DATE(2022,4,1), "March (5)",
+    [Date] >= DATE(2022,4,2) && [Date] <= DATE(2022,4,29), "April (4)",
+    [Date] >= DATE(2022,4,30) && [Date] <= DATE(2022,5,27), "May (4)",
+    [Date] >= DATE(2022,5,28) && [Date] <= DATE(2022,7,1), "June (5)",
+    [Date] >= DATE(2022,7,2) && [Date] <= DATE(2022,7,29), "July (4)",
+    [Date] >= DATE(2022,7,30) && [Date] <= DATE(2022,8,26), "August (4)",
+    [Date] >= DATE(2022,8,27) && [Date] <= DATE(2022,9,30), "September (5)",
+    [Date] >= DATE(2022,10,1) && [Date] <= DATE(2022,10,28), "October (4)",
+    [Date] >= DATE(2022,10,29) && [Date] <= DATE(2022,11,25), "November (4)",
+    [Date] >= DATE(2022,11,26) && [Date] <= DATE(2022,12,30), "December (5)",
+    //2023
+    [Date] >= DATE(2022,12,31) && [Date] <= DATE(2023,1,27), "January (4)",
+    [Date] >= DATE(2023,1,28) && [Date] <= DATE(2023,2,24), "February (4)",
+    [Date] >= DATE(2023,2,25) && [Date] <= DATE(2023,3,31), "March (5)",
+    [Date] >= DATE(2023,4,1) && [Date] <= DATE(2023,4,28), "April (4)",
+    [Date] >= DATE(2023,4,29) && [Date] <= DATE(2023,5,26), "May (4)",
+    [Date] >= DATE(2023,5,27) && [Date] <= DATE(2023,6,30), "June (5)",
+    [Date] >= DATE(2023,7,1) && [Date] <= DATE(2023,7,28), "July (4)",
+    [Date] >= DATE(2023,7,29) && [Date] <= DATE(2023,8,25), "August (4)",
+    [Date] >= DATE(2023,8,26) && [Date] <= DATE(2023,9,29), "September (5)",
+    [Date] >= DATE(2023,9,30) && [Date] <= DATE(2023,10,27), "October (4)",
+    [Date] >= DATE(2023,10,28) && [Date] <= DATE(2023,11,24), "November (4)",
+    [Date] >= DATE(2023,11,25) && [Date] <= DATE(2023,12,29), "December (5)",
+    //2024
+    [Date] >= DATE(2023,12,30) && [Date] <= DATE(2024,1,26), "January (4)",
+    [Date] >= DATE(2024,1,27) && [Date] <= DATE(2024,2,23), "February (4)",
+    [Date] >= DATE(2024,2,24) && [Date] <= DATE(2024,3,29), "March (5)",
+    [Date] >= DATE(2024,3,30) && [Date] <= DATE(2024,4,26), "April (4)",
+    [Date] >= DATE(2024,4,27) && [Date] <= DATE(2024,5,24), "May (4)",
+    [Date] >= DATE(2024,5,25) && [Date] <= DATE(2024,6,28), "June (5)",
+    [Date] >= DATE(2024,6,29) && [Date] <= DATE(2024,7,26), "July (4)",
+    [Date] >= DATE(2024,7,27) && [Date] <= DATE(2024,8,23), "August (4)",
+    [Date] >= DATE(2024,8,24) && [Date] <= DATE(2024,9,27), "September (5)",
+    [Date] >= DATE(2024,9,28) && [Date] <= DATE(2024,10,25), "October (4)",
+    [Date] >= DATE(2024,10,26) && [Date] <= DATE(2024,11,22), "November (4)",
+    [Date] >= DATE(2024,11,23) && [Date] <= DATE(2024,12,27), "December (5)",
+    //2025
+    [Date] >= DATE(2024,12,28) && [Date] <= DATE(2025,1,24), "January (4)",
+    [Date] >= DATE(2025,1,25) && [Date] <= DATE(2025,2,21), "February (4)",
+    [Date] >= DATE(2025,2,22) && [Date] <= DATE(2025,3,28), "March (5)",
+    [Date] >= DATE(2025,3,29) && [Date] <= DATE(2025,4,25), "April (4)",
+    [Date] >= DATE(2025,4,26) && [Date] <= DATE(2025,5,23), "May (4)",
+    [Date] >= DATE(2025,5,24) && [Date] <= DATE(2025,6,27), "June (5)",
+    [Date] >= DATE(2025,6,29) && [Date] <= DATE(2025,7,25), "July (4)",
+    [Date] >= DATE(2025,7,26) && [Date] <= DATE(2025,8,22), "August (4)",
+    [Date] >= DATE(2025,8,23) && [Date] <= DATE(2025,9,26), "September (5)",
+    [Date] >= DATE(2025,9,27) && [Date] <= DATE(2025,10,24), "October (4)",
+    [Date] >= DATE(2025,10,25) && [Date] <= DATE(2025,11,21), "November (4)",
+    [Date] >= DATE(2025,11,22) && [Date] <= DATE(2025,12,26), "December (5)",
+    //2026
+    [Date] >= DATE(2025,12,27) && [Date] <= DATE(2026,1,23), "January (4)",
+    [Date] >= DATE(2026,1,24) && [Date] <= DATE(2026,2,20), "February (4)",
+    [Date] >= DATE(2026,2,21) && [Date] <= DATE(2026,3,27), "March (5)",
+    [Date] >= DATE(2026,3,28) && [Date] <= DATE(2026,4,24), "April (4)",
+    [Date] >= DATE(2026,4,25) && [Date] <= DATE(2026,5,22), "May (4)",
+    [Date] >= DATE(2026,5,23) && [Date] <= DATE(2026,6,26), "June (5)",
+    [Date] >= DATE(2026,6,27) && [Date] <= DATE(2026,7,24), "July (4)",
+    [Date] >= DATE(2026,7,25) && [Date] <= DATE(2026,8,21), "August (4)",
+    [Date] >= DATE(2026,8,22) && [Date] <= DATE(2026,9,25), "September (5)",
+    [Date] >= DATE(2026,9,26) && [Date] <= DATE(2026,10,23), "October (4)",
+    [Date] >= DATE(2026,10,24) && [Date] <= DATE(2026,11,20), "November (4)",
+    [Date] >= DATE(2026,11,21) && [Date] <= DATE(2027,01,01), "December (6)",
+    BLANK()
+)
+
+
+FiscalQuarter = 
+CalendarTable[FiscalYear] & "-Q" & 
+    SWITCH(
+        TRUE(),
+        //2022
+        INT(([Date] - DATE(2022,01,01))/91) + 1 = 1, "1",
+        INT(([Date] - DATE(2022,01,01))/91) + 1 = 2, "2",
+        INT(([Date] - DATE(2022,01,01))/91) + 1 = 3, "3",
+        INT(([Date] - DATE(2022,01,01))/91) + 1 = 4, "4",
+        //2023
+        INT(([Date] - DATE(2022,01,01))/91) + 1 = 5, "1",
+        INT(([Date] - DATE(2022,01,01))/91) + 1 = 6, "2",
+        INT(([Date] - DATE(2022,01,01))/91) + 1 = 7, "3",
+        INT(([Date] - DATE(2022,01,01))/91) + 1 = 8, "4",
+        //2024
+        INT(([Date] - DATE(2022,01,01))/91) + 1 = 9, "1",
+        INT(([Date] - DATE(2022,01,01))/91) + 1 = 10, "2",
+        INT(([Date] - DATE(2022,01,01))/91) + 1 = 11, "3",
+        INT(([Date] - DATE(2022,01,01))/91) + 1 = 12, "4",
+        //2025
+        INT(([Date] - DATE(2022,01,01))/91) + 1 = 13, "1",
+        INT(([Date] - DATE(2022,01,01))/91) + 1 = 14, "2",
+        INT(([Date] - DATE(2022,01,01))/91) + 1 = 15, "3",
+        INT(([Date] - DATE(2022,01,01))/91) + 1 = 16, "4",
+        //2026 - 53 Week Year
+        INT(([Date] - DATE(2022,01,01))/91) + 1 = 17, "1",
+        INT(([Date] - DATE(2022,01,01))/91) + 1 = 18, "2",
+        INT(([Date] - DATE(2022,01,01))/91) + 1 = 19, "3",
+        INT(([Date] - DATE(2022,01,01))/98) + 1 = 20, "4",        
+        BLANK()
+    )
+
+FiscalYear = 
+    SWITCH(
+        TRUE(),
+        [Date] >= DATE(2020,12,26) && [Date] <= DATE(2021,12,31), "2021",
+        [Date] >= DATE(2022,01,01) && [Date] <= DATE(2022,12,30), "2022",
+        [Date] >= DATE(2022,12,31) && [Date] <= DATE(2023,12,29), "2023",
+        [Date] >= DATE(2023,12,30) && [Date] <= DATE(2024,12,27), "2024",
+        [Date] >= DATE(2024,12,28) && [Date] <= DATE(2025,12,26), "2025",
+        [Date] >= DATE(2025,12,27) && [Date] <= DATE(2027,01,01), "2026",
+        BLANK()
+    )
 

@@ -38,13 +38,13 @@ ADDCOLUMNS (
 
 // Parent Fiscal
 
-FiscalWeek = 
+Fiscal Week = 
 VAR FiscalYearStartDate = DATE(2022, 12, 31)
 VAR WeeksSinceStart = INT(([Date] - FiscalYearStartDate) / 7)
 RETURN
     CalendarTable[FiscalYear] & "-W" & FORMAT(MOD(WeeksSinceStart, 52) + 1, "00")
 
-FiscalMonth = 
+Fiscal Month = 
 CalendarTable[FiscalYear] & "-M" &
 SWITCH(
     TRUE(),
@@ -117,7 +117,7 @@ SWITCH(
 )
 
 
-FiscalMonthLong = 
+Fiscal Month Long = 
 CalendarTable[FiscalYear] & "-" &
 SWITCH(
     TRUE(),
@@ -190,7 +190,7 @@ SWITCH(
 )
 
 
-FiscalQuarter = 
+Fiscal Quarter = 
 CalendarTable[FiscalYear] & "-Q" & 
     SWITCH(
         TRUE(),
@@ -222,7 +222,7 @@ CalendarTable[FiscalYear] & "-Q" &
         BLANK()
     )
 
-FiscalYear = 
+Fiscal Year = 
     SWITCH(
         TRUE(),
         [Date] >= DATE(2020,12,26) && [Date] <= DATE(2021,12,31), "2021",

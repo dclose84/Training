@@ -16,6 +16,7 @@ RETURN
         "QuarterNumber", FORMAT( [Date], "Q" ),
         "MonthYearNumber", FORMAT( [Date], "yy mm"),
         "Month Year", FORMAT( [Date], "mmm yyyy")
+        "Day", DAY([Date]),
     )
 
 // Standard Calendar Table

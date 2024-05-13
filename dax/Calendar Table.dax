@@ -43,10 +43,10 @@ Fiscal Week =
 VAR FiscalYearStartDate = DATE(2022, 12, 31)
 VAR WeeksSinceStart = INT(([Date] - FiscalYearStartDate) / 7)
 RETURN
-    CalendarTable[FiscalYear] & "-W" & FORMAT(MOD(WeeksSinceStart, 52) + 1, "00")
+    CalendarTable[Fiscal Year] & "-W" & FORMAT(MOD(WeeksSinceStart, 52) + 1, "00")
 
 Fiscal Month = 
-CalendarTable[FiscalYear] & "-M" &
+CalendarTable[Fiscal Year] & "-M" &
 SWITCH(
     TRUE(),
     //2022
@@ -119,7 +119,7 @@ SWITCH(
 
 
 Fiscal Month Long = 
-CalendarTable[FiscalYear] & "-" &
+CalendarTable[Fiscal Year] & "-" &
 SWITCH(
     TRUE(),
     //2022
@@ -192,7 +192,7 @@ SWITCH(
 
 
 Fiscal Quarter = 
-CalendarTable[FiscalYear] & "-Q" & 
+CalendarTable[Fiscal Year] & "-Q" & 
     SWITCH(
         TRUE(),
         //2022

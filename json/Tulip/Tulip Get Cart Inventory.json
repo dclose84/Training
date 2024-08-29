@@ -1,0 +1,3 @@
+{
+    "input": "ExecuteQueryWithReturn*!*select part, bin, quantity from item_master where bin = '$Cart$'*!*FLDSER_HIS"
+  }

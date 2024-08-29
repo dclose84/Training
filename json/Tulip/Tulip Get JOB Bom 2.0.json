@@ -1,0 +1,4 @@
+{
+    "input": "ExecuteQueryWithReturn*!*select JOB, SUFFIX, LMO, DESCRIPTION, UM, PART, UNITS from JOB_OPERATIONS where job = '$Job$' and LMO like '%M%' limit 200*!*FLDSER_HIS"
+  }
+

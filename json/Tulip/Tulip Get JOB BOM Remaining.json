@@ -1,0 +1,3 @@
+{
+    "input": "ExecuteQueryWithReturn*!*select job_operations.part, description, units - coalesce(b.quantity, 0) as qty_remaining, job, suffix, lmo, um from job_operations left join (select part, quantity from item_master where bin = '$Cart Bin$') b on job_operations.part = b.part where concat(job, if(ltrim(suffix) = '', '', concat('-', suffix))) = '$Job$' and lmo = 'M' and flag_closed <> 'Y' and job_operations.part <> ''*!*FLDSER_HIS"
+  }

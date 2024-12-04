@@ -5,7 +5,9 @@
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="dNxyNK7c78bLwvsdeMH5-11" value="GSS Cloud Topography" style="swimlane;html=1;startSize=20;horizontal=1;containerType=tree;glass=0;" parent="1" vertex="1">
-          <mxGeometry x="-460" y="110" width="920" height="300" as="geometry" />
+          <mxGeometry x="-460" y="110" width="920" height="300" as="geometry">
+            <mxRectangle x="-460" y="110" width="170" height="30" as="alternateBounds" />
+          </mxGeometry>
         </mxCell>
         <UserObject label="GSSDB" name="Tessa Miller" position="CFO" location="Office 1" email="me@example.com" placeholders="1" link="https://www.draw.io" id="dNxyNK7c78bLwvsdeMH5-12">
           <mxCell style="label;whiteSpace=wrap;html=1;rounded=0;glass=0;treeMoving=1;treeFolding=1;" parent="dNxyNK7c78bLwvsdeMH5-11" vertex="1">
@@ -13,7 +15,12 @@
           </mxCell>
         </UserObject>
         <mxCell id="eYdxeIQtRBKgznH9Euof-1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" source="dNxyNK7c78bLwvsdeMH5-12" target="eYdxeIQtRBKgznH9Euof-2" parent="dNxyNK7c78bLwvsdeMH5-11">
-          <mxGeometry relative="1" as="geometry" />
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="460" y="160" />
+              <mxPoint x="570" y="160" />
+            </Array>
+          </mxGeometry>
         </mxCell>
         <UserObject label="HOF010-TS3" name="Tessa Miller" position="CFO" location="Office 1" email="me@example.com" placeholders="1" link="https://www.draw.io" id="eYdxeIQtRBKgznH9Euof-2">
           <mxCell style="label;whiteSpace=wrap;html=1;rounded=0;glass=0;treeMoving=1;treeFolding=1;" vertex="1" parent="dNxyNK7c78bLwvsdeMH5-11">
@@ -21,7 +28,12 @@
           </mxCell>
         </UserObject>
         <mxCell id="eYdxeIQtRBKgznH9Euof-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" source="dNxyNK7c78bLwvsdeMH5-12" target="eYdxeIQtRBKgznH9Euof-4" parent="dNxyNK7c78bLwvsdeMH5-11">
-          <mxGeometry relative="1" as="geometry" />
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="460" y="160" />
+              <mxPoint x="350" y="160" />
+            </Array>
+          </mxGeometry>
         </mxCell>
         <UserObject label="HOF010-TS2" name="Tessa Miller" position="CFO" location="Office 1" email="me@example.com" placeholders="1" link="https://www.draw.io" id="eYdxeIQtRBKgznH9Euof-4">
           <mxCell style="label;whiteSpace=wrap;html=1;rounded=0;glass=0;treeMoving=1;treeFolding=1;" vertex="1" parent="dNxyNK7c78bLwvsdeMH5-11">

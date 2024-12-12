@@ -1,9 +1,52 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0" version="25.0.1">
   <diagram name="Page-1" id="Q906IHFugsQCp0oei5t4">
-    <mxGraphModel>
+    <mxGraphModel dx="1149" dy="522" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="EzLKjoL3ACP8pirlFQWr-1" value="Plastics Room" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="90" y="230" width="400" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="EzLKjoL3ACP8pirlFQWr-2" value="Kitting Hallway" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="490" y="40" width="190" height="590" as="geometry" />
+        </mxCell>
+        <mxCell id="EzLKjoL3ACP8pirlFQWr-3" value="Telecom Room" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="680" y="420" width="120" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="EzLKjoL3ACP8pirlFQWr-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="EzLKjoL3ACP8pirlFQWr-4" target="EzLKjoL3ACP8pirlFQWr-6">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="560" y="500" as="sourcePoint" />
+            <mxPoint x="490" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EzLKjoL3ACP8pirlFQWr-4" value="" style="triangle;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="750" y="420" width="20" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="EzLKjoL3ACP8pirlFQWr-6" value="Plastics Switch" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="490" y="400" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="EzLKjoL3ACP8pirlFQWr-7" value="Wall Port" style="triangle;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="470" y="440" width="20" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="EzLKjoL3ACP8pirlFQWr-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.22;entryY=0.495;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="EzLKjoL3ACP8pirlFQWr-6" target="EzLKjoL3ACP8pirlFQWr-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EzLKjoL3ACP8pirlFQWr-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="EzLKjoL3ACP8pirlFQWr-9" target="EzLKjoL3ACP8pirlFQWr-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EzLKjoL3ACP8pirlFQWr-9" value="Wall Port" style="triangle;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="250" y="600" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="EzLKjoL3ACP8pirlFQWr-10" value="Router" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="110" y="480" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="EzLKjoL3ACP8pirlFQWr-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.376;entryY=0.667;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="EzLKjoL3ACP8pirlFQWr-7" target="EzLKjoL3ACP8pirlFQWr-9">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="480" y="620" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>

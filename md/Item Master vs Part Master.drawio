@@ -1,9 +1,40 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0" version="25.0.3">
   <diagram name="Page-1" id="BP-gst4Qyc8AcCLLhmSh">
-    <mxGraphModel>
+    <mxGraphModel dx="1666" dy="757" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="HEZD0w8XLSX_1bLX64r1-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="HEZD0w8XLSX_1bLX64r1-1" target="HEZD0w8XLSX_1bLX64r1-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="HEZD0w8XLSX_1bLX64r1-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="HEZD0w8XLSX_1bLX64r1-1" target="HEZD0w8XLSX_1bLX64r1-4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="425" y="160" />
+              <mxPoint x="593" y="160" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HEZD0w8XLSX_1bLX64r1-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="HEZD0w8XLSX_1bLX64r1-1" target="HEZD0w8XLSX_1bLX64r1-6">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="425" y="160" />
+              <mxPoint x="243" y="160" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HEZD0w8XLSX_1bLX64r1-1" value="Part Master&lt;div&gt;VC-KF-50BF loc 01&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="365" y="80" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HEZD0w8XLSX_1bLX64r1-2" value="Item Master&lt;div&gt;VC-KF-50BF loc 01&lt;/div&gt;&lt;div&gt;Lot 123, Bin 01A01A&lt;/div&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="353" y="220" width="145" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="HEZD0w8XLSX_1bLX64r1-4" value="Item Master&lt;div&gt;VC-KF-50BF loc 01&lt;/div&gt;&lt;div&gt;Lot 234, Bin 02B02B&lt;/div&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="520" y="220" width="145" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="HEZD0w8XLSX_1bLX64r1-6" value="Item Master&lt;div&gt;VC-KF-50BF loc 01&lt;/div&gt;&lt;div&gt;Lot 345, Bin 03C03C&lt;/div&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="170" y="220" width="145" height="70" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>

@@ -1,0 +1,59 @@
+First / Middle / Last (Three Columns)
+First_Name_Short  
+=PROPER(IF(ISNUMBER(FIND(" ", [@[First Name]])), MID([@[First Name]], FIND(" ", [@[First Name]]) + 1, LEN([@[First Name]]) - FIND(" ", [@[First Name]])), ""))
+First_Name  
+=PROPER(LEFT([@[First Name]], FIND(" ", [@[First Name]] & " ") - 1))
+Middle_Name  
+=PROPER(IFS(AND([@[First_Name_Short]]="", [@[Middle]]=""), "",[@[First_Name_Short]]="", [@[Middle]], AND([@[First_Name_Short]]<>"", [@[Middle]]=""), [@[First_Name_Short]], AND([@[First_Name_Short]]<>"", [@[Middle]]<>""), CONCAT([@[First_Name_Short]]," ",[@[Middle]])))
+
+(for leading space)
+=PROPER(IF(ISNUMBER(FIND(" ", TRIM([@[FIRST NAME]]))), MID(TRIM([@[FIRST NAME]]), FIND(" ", TRIM([@[FIRST NAME]])) + 1, LEN(TRIM([@[FIRST NAME]])) - FIND(" ", TRIM([@[FIRST NAME]]))), ""))
+=PROPER(LEFT(TRIM([@[FIRST NAME]]), FIND(" ", TRIM([@[FIRST NAME]]) & " ") - 1))
+
+
+First Middle Last
+First_Name  
+=PROPER(LEFT([@Name], FIND(" ", [@Name] & " ") - 1))
+Middle_Name  
+=PROPER(IF(LEN(TRIM([@Name]))-LEN(SUBSTITUTE([@Name]," ",""))>1, MID([@Name], FIND(" ",[@Name])+1, FIND(" ",[@Name], FIND(" ",[@Name])+1) - FIND(" ",[@Name])-1), ""))
+Last_Name  
+=PROPER(IF(LEN([@Name])-LEN(SUBSTITUTE([@Name]," ",""))>1, RIGHT([@Name],LEN([@Name])-FIND(" ",[@Name],FIND(" ",[@Name])+1)), RIGHT([@Name],LEN([@Name])-FIND(" ",[@Name]))))
+
+Last, First M
+First_Name_Short
+=PROPER(MID([@Name], FIND(", ", [@Name]) + 2, LEN([@Name]) - FIND(", ", [@Name])))
+First_Name  
+=PROPER(LEFT([@[First_Name_Short]], FIND(" ", [@[First_Name_Short]] & " ") - 1))
+Middle_Name 
+=IFERROR(PROPER(MID([@[First_Name_Short]], FIND(" ", [@[First_Name_Short]]) + 1, LEN([@[First_Name_Short]]) - FIND(" ", [@[First_Name_Short]]))),"")
+Last_Name 
+=PROPER(LEFT([@Name], FIND(",", [@Name] & ",") - 1))
+
+Gender
+=XLOOKUP([@Greeting],'Basic Tables.xlsm'!GENDER[Name],'Basic Tables.xlsm'!GENDER[Gender],"")
+
+CSV_Email:
+=IF([@[Supplied_Email]]="",[@[Derived_Email]],[@[Supplied_Email]])
+
+Union_Local:
+=IF([@Local]="",[@Union],CONCAT([@Union]," ",[@Local]))
+
+
+Email
+John.Doe
+=LOWER(CONCAT(SUBSTITUTE(SUBSTITUTE([@[First_Name]], "'", ""), " ", ""), ".", SUBSTITUTE(SUBSTITUTE([@[Last_Name]], "'", ""), " ", ""), "@alrb.ca.gov"))
+jdoe
+=LOWER(CONCAT(LEFT([@[First_Name]],1), SUBSTITUTE(SUBSTITUTE([@[Last_Name]], "'", ""), " ", ""), "@ad.lacounty.gov"))
+
+
+Address
+=PROPER(LEFT([@[Office Address]], FIND(",", [@[Office Address]]) - 1))
+
+Address, City, State Zip
+=LEFT([@[Address]], FIND(",", [@[Address]]) - 1)
+=TRIM(MID([@[Address]], FIND(",", [@[Address]]) + 1, FIND(",", [@[Address]] & ",", FIND(",", [@[Address]]) + 1) - FIND(",", [@[Address]]) - 1))
+=TRIM(MID([@[Address]], FIND(",", [@[Address]], FIND(",", [@[Address]]) + 1) + 2, 2))
+=TRIM(RIGHT([@[Address]], LEN([@[Address]]) - FIND(",", [@[Address]], FIND(",", [@[Address]]) + 1) - 4))
+
+Remove line break:
+=SUBSTITUTE(PROPER([@[Position Title2]]), CHAR(10), " ")

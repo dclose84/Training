@@ -17,7 +17,7 @@ each if Text.Contains(Text.Lower([DESCRIPTION]), "upward") then "UPWARD"
     else null)
 
     FiscalQuarter = 
-Calendar[UCT-FiscalYear] & "-Q" & 
+Calendar[FiscalYear] & "-Q" & 
     SWITCH(
         TRUE(),
         //2022
@@ -50,7 +50,7 @@ Calendar[UCT-FiscalYear] & "-Q" &
 
 
 FiscalMonth = 
-CalendarTable[UCT-FiscalYear] & "-" &
+CalendarTable[FiscalYear] & "-" &
 SWITCH(
     TRUE(),
     //2022

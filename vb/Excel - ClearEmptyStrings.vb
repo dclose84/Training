@@ -11,7 +11,7 @@ Sub ClearEmptyStrings()
     Dim suffix As Integer
     Dim rowCount As Long, colCount As Long
 
-    ' Disable visual/processing overhead
+    ' Disable visual/processing overhead to speed up execution and prevent screen flickering
     Application.ScreenUpdating = False
     Application.Calculation = xlCalculationManual
     Application.EnableEvents = False

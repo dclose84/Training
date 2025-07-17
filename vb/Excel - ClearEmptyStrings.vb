@@ -10,8 +10,9 @@ Sub ClearEmptyStrings()
     Dim baseName As String, newName As String
     Dim suffix As Integer
     Dim rowCount As Long, colCount As Long
+    Dim tbl As ListObject
 
-    ' Disable visual/processing overhead to speed up execution and prevent screen flickering
+    ' Disable visual/processing overhead
     Application.ScreenUpdating = False
     Application.Calculation = xlCalculationManual
     Application.EnableEvents = False
@@ -84,6 +85,17 @@ Sub ClearEmptyStrings()
     Else
         MsgBox "No cells with empty strings were found on the copied sheet.", vbInformation, "No Action"
     End If
+
+    ' --- NEW: Create a table named "CLEAN" ---
+    On Error Resume Next
+    For Each tbl In cleanedSheet.ListObjects
+        tbl.Unlist ' Remove existing tables
+    Next tbl
+    On Error GoTo 0
+
+    Set dataRange = cleanedSheet.UsedRange
+    Set tbl = cleanedSheet.ListObjects.Add(xlSrcRange, dataRange, , xlYes)
+    tbl.Name = "CLEAN"
 
 Cleanup:
     ' Restore settings

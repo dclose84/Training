@@ -19,7 +19,14 @@ Sub EditList()
         .Font.ColorIndex = xlColorIndexAutomatic
         .Font.Bold = False
         .Font.Underline = xlUnderlineStyleNone
+        .WrapText = False
+        .Font.Name = "Calibri"
+        .Font.Size = 11
     End With
+
+    ' Auto-fit columns and rows
+    rng.Columns.AutoFit
+    rng.Rows.AutoFit
 
     ' Step 3: Create table and name it "WORKING"
     On Error Resume Next
@@ -56,5 +63,3 @@ Sub EditList()
     ' Step 6: Return to Working sheet
     ws.Activate
 End Sub
-
-

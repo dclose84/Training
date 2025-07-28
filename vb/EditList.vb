@@ -41,9 +41,9 @@ Sub EditList()
     ' Step 4: Add columns to end of table
     colHeaders = Array( _
         "First_Name_Short", "First_Name", "Middle_Name", "Last_Name", "Suffix_Name", _
-        "Greeting", "Gender", "Birth Year", "Birth Month", "Birth Day of Month", _
-        "Derived_Email", "CSV_Email", "Union", "Local", "Bargaining_Unit", "Pin_Color", _
-        "Union_Local", "Employer", "Employer_Type", "Worker_Type", _
+        "Greeting", "Birth Year", "Birth Month", "Birth Day of Month", "Gender", _
+        "Supplied_Email", "Derived_Email", "Union", "Local", "Bargaining_Unit", "Pin_Color", _
+        "Employer", "Employer_Type", "Worker_Type", _
         "Work_Address", "Work_City", "Work_State", "Work_Zip", "Work_County")
 
     For i = LBound(colHeaders) To UBound(colHeaders)
@@ -52,13 +52,13 @@ Sub EditList()
     Next i
 
     ' Step 5: Create "CSV" sheet with defined headers
-    Set newSheet = Worksheets.Add(After:=ws)
-    newSheet.Name = "CSV"
+    'Set newSheet = Worksheets.Add(After:=ws)
+    'newSheet.Name = "CSV"
 
-    csvHeaders = Array("First Name", "Last Name", "Email", "Union")
-    For i = LBound(csvHeaders) To UBound(csvHeaders)
-        newSheet.Cells(1, i + 1).Value = csvHeaders(i)
-    Next i
+    'csvHeaders = Array("First Name", "Last Name", "Email", "Union")
+    'For i = LBound(csvHeaders) To UBound(csvHeaders)
+    '    newSheet.Cells(1, i + 1).Value = csvHeaders(i)
+    'Next i
 
     ' Step 6: Return to Working sheet
     ws.Activate

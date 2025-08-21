@@ -2,6 +2,12 @@
 
 =A2 & REPT(" ", 17 - LEN(A2))
 
+=A2 & REPT(" ", 6 - LEN(A1))
+=B2 & REPT(" ", 2 - LEN(A1))
+=C2 & REPT(" ", 30 - LEN(A1))
+
+=A2 & REPT(" ", 17 - LEN(A2))
+
 =LEFT([@PART],17)
 =IF([@Len]=20,RIGHT([@PART],3),"   ")
 =CONCAT([@[Part_Short]] & REPT(" ", 17 - LEN([@[Part_Short]])),[@[Mod_Rev]])

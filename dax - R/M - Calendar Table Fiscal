@@ -1,0 +1,368 @@
+let
+    /*
+      Calendar Table (Power Query)
+
+      Summary:
+      - Generates one row per day for the configured fiscal years.
+      - Fiscal Year is Jan 1 to Dec 31 (Fiscal Year = calendar year).
+      - Fiscal Week is Sunday-based (Week 1 starts on the Sunday of the week containing Jan 1).
+      - Fiscal Periods follow a 5-4-4 pattern across 12 periods. If a year has 53 weeks, the extra week is added to ExtraWeekPeriod (typically 12).
+      - Ensures one row per DateKey (deduped defensively).
+
+      To extend to future years:
+      - In FYConfig, uncomment the desired rows (2027/2028/2029) to include them.
+    */
+
+    FYConfig =
+        #table(
+            type table [FiscalYear = Int64.Type, ExtraWeekPeriod = Int64.Type],
+            {
+                {2025, 12},
+                {2026, 12}
+                // To include future years, remove the leading // from the rows below:
+                //,{2027, 12}
+                //,{2028, 12}
+                //,{2029, 12}
+            }
+        ),
+
+    PeriodWeeksBase = {5, 4, 4, 5, 4, 4, 5, 4, 4, 5, 4, 4},
+
+    fnPeriodWeeks =
+        (weeksInYear as nullable number, extraPeriod as nullable number) as list =>
+            if weeksInYear = 53 and extraPeriod <> null then
+                List.Transform(
+                    {0..11},
+                    (i) => if i = (extraPeriod - 1) then PeriodWeeksBase{i} + 1 else PeriodWeeksBase{i}
+                )
+            else
+                PeriodWeeksBase,
+
+    fnPeriodNumFromWeek =
+        (wkNum as nullable number, weeksInYear as nullable number, extraPeriod as nullable number) as nullable number =>
+            if wkNum = null or weeksInYear = null then
+                null
+            else
+                let
+                    pw = fnPeriodWeeks(weeksInYear, extraPeriod),
+                    cumWeeks =
+                        List.Accumulate(
+                            pw,
+                            {},
+                            (state, w) => state & { (if List.Count(state) = 0 then w else List.Last(state) + w) }
+                        ),
+                    pos = List.PositionOf(List.Transform(cumWeeks, each wkNum <= _), true),
+                    pNum = if pos = -1 then null else pos + 1
+                in
+                    pNum,
+
+    fnPeriodStartFromNum =
+        (pNum as nullable number, weeksInYear as nullable number, extraPeriod as nullable number, week1Start as nullable date) as nullable date =>
+            if pNum = null or weeksInYear = null or week1Start = null then
+                null
+            else
+                let
+                    pw = fnPeriodWeeks(weeksInYear, extraPeriod),
+                    cumWeeks =
+                        List.Accumulate(
+                            pw,
+                            {},
+                            (state, w) => state & { (if List.Count(state) = 0 then w else List.Last(state) + w) }
+                        ),
+                    weeksBefore = if pNum = 1 then 0 else cumWeeks{pNum - 2},
+                    startDate = Date.AddDays(week1Start, weeksBefore * 7)
+                in
+                    startDate,
+
+    fnPeriodEndFromNum =
+        (pNum as nullable number, weeksInYear as nullable number, extraPeriod as nullable number, week1Start as nullable date) as nullable date =>
+            if pNum = null or weeksInYear = null or week1Start = null then
+                null
+            else
+                let
+                    pw = fnPeriodWeeks(weeksInYear, extraPeriod),
+                    weeksThis = pw{pNum - 1},
+                    startDate = fnPeriodStartFromNum(pNum, weeksInYear, extraPeriod, week1Start),
+                    endDate = if startDate = null then null else Date.AddDays(startDate, (weeksThis * 7) - 1)
+                in
+                    endDate,
+
+    FYConfig2 =
+        Table.AddColumn(
+            Table.AddColumn(
+                Table.AddColumn(
+                    Table.AddColumn(
+                        FYConfig,
+                        "YearStart", each #date([FiscalYear], 1, 1), type date
+                    ),
+                    "YearEnd", each #date([FiscalYear], 12, 31), type date
+                ),
+                "Week1Start", each Date.StartOfWeek([YearStart], Day.Sunday), type date
+            ),
+            "WeeksInYear",
+            each
+                let
+                    wk1 = [Week1Start],
+                    lastWkStart = Date.StartOfWeek([YearEnd], Day.Sunday)
+                in
+                    Number.IntegerDivide(Duration.Days(lastWkStart - wk1), 7) + 1,
+            Int64.Type
+        ),
+
+    StartFY = List.Min(FYConfig2[FiscalYear]),
+    EndFY = List.Max(FYConfig2[FiscalYear]),
+    StartDate = #date(StartFY, 1, 1),
+    EndDate = #date(EndFY, 12, 31),
+
+    Today = Date.From(DateTime.LocalNow()),
+    TodayFY = Date.Year(Today),
+    TodayFYRow = try Table.First(Table.SelectRows(FYConfig2, each [FiscalYear] = TodayFY)) otherwise null,
+    TodayWeeksInYear = if TodayFYRow = null then null else TodayFYRow[WeeksInYear],
+    TodayExtraPeriod = if TodayFYRow = null then null else TodayFYRow[ExtraWeekPeriod],
+    TodayWeek1Start = if TodayFYRow = null then null else TodayFYRow[Week1Start],
+    TodayWeekStart = Date.StartOfWeek(Today, Day.Sunday),
+    TodayWeekNum =
+        if TodayWeek1Start = null then
+            null
+        else
+            let
+                n = Number.IntegerDivide(Duration.Days(TodayWeekStart - TodayWeek1Start), 7) + 1
+            in
+                if TodayWeeksInYear <> null and (n < 1 or n > TodayWeeksInYear) then null else n,
+    TodayPeriodNum = fnPeriodNumFromWeek(TodayWeekNum, TodayWeeksInYear, TodayExtraPeriod),
+
+    DateList = List.Dates(StartDate, Duration.Days(EndDate - StartDate) + 1, #duration(1, 0, 0, 0)),
+    Dates = Table.FromList(DateList, Splitter.SplitByNothing(), {"DateKey"}),
+    DatesTyped = Table.TransformColumnTypes(Dates, {{"DateKey", type date}}),
+
+    AddDateAsInteger = Table.AddColumn(DatesTyped, "DateAsInteger", each Number.FromText(Date.ToText([DateKey], "yyyyMMdd")), Int64.Type),
+    AddDateTimeKey = Table.AddColumn(AddDateAsInteger, "DateTimeKey", each DateTime.From([DateKey]), type datetime),
+    AddDateID = Table.AddIndexColumn(AddDateTimeKey, "DateID", 1, 1, Int64.Type),
+    AddWeekID = Table.AddColumn(AddDateID, "WeekID", each Number.IntegerDivide([DateID] - 1, 7) + 1, Int64.Type),
+
+    AddYearID = Table.AddColumn(AddWeekID, "YearID", each Date.Year([DateKey]), Int64.Type),
+    AddMonthName = Table.AddColumn(AddYearID, "Month Name", each Date.ToText([DateKey], "MMMM"), type text),
+
+    AddFiscalYear = Table.AddColumn(AddMonthName, "Fiscal Year", each Date.Year([DateKey]), Int64.Type),
+
+    MergeFY = Table.NestedJoin(AddFiscalYear, {"Fiscal Year"}, FYConfig2, {"FiscalYear"}, "FY", JoinKind.LeftOuter),
+    ExpandFY = Table.ExpandTableColumn(MergeFY, "FY", {"WeeksInYear", "ExtraWeekPeriod", "Week1Start", "YearStart", "YearEnd"}, {"WeeksInYear", "ExtraWeekPeriod", "Week1Start", "YearStart", "YearEnd"}),
+
+    AddFiscalWeekNum =
+        Table.AddColumn(
+            ExpandFY,
+            "FiscalWeekNum",
+            each
+                let
+                    wk1 = [Week1Start],
+                    wksInYear = [WeeksInYear],
+                    wkStart = Date.StartOfWeek([DateKey], Day.Sunday),
+                    wkNum = if wk1 = null then null else Number.IntegerDivide(Duration.Days(wkStart - wk1), 7) + 1
+                in
+                    if wkNum = null or wksInYear = null or wkNum < 1 or wkNum > wksInYear then null else wkNum,
+            Int64.Type
+        ),
+
+    AddFiscalWeek =
+        Table.AddColumn(
+            AddFiscalWeekNum,
+            "Fiscal Week",
+            each if [FiscalWeekNum] = null then null else Text.PadStart(Text.From([FiscalWeekNum]), 2, "0"),
+            type text
+        ),
+
+    AddFiscalPeriodNum =
+        Table.AddColumn(
+            AddFiscalWeek,
+            "FiscalPeriodNum",
+            each fnPeriodNumFromWeek([FiscalWeekNum], [WeeksInYear], [ExtraWeekPeriod]),
+            Int64.Type
+        ),
+
+    AddFiscalPeriod =
+        Table.AddColumn(
+            AddFiscalPeriodNum,
+            "Fiscal Period",
+            each if [FiscalPeriodNum] = null then null else Text.PadStart(Text.From([FiscalPeriodNum]), 2, "0"),
+            type text
+        ),
+
+    AddFiscalQuarterNum =
+        Table.AddColumn(
+            AddFiscalPeriod,
+            "FiscalQuarterNum",
+            each if [FiscalPeriodNum] = null then null else Number.RoundUp([FiscalPeriodNum] / 3),
+            Int64.Type
+        ),
+
+    AddFiscalQuarter =
+        Table.AddColumn(
+            AddFiscalQuarterNum,
+            "Fiscal Quarter",
+            each if [FiscalQuarterNum] = null then null else "Q" & Text.From([FiscalQuarterNum]),
+            type text
+        ),
+
+    AddFiscalPeriodName =
+        Table.AddColumn(
+            AddFiscalQuarter,
+            "Fiscal Period Name",
+            each if [Fiscal Period] = null then null else "Period " & [Fiscal Period],
+            type text
+        ),
+
+    AddPeriodStartRaw =
+        Table.AddColumn(
+            AddFiscalPeriodName,
+            "PeriodStartRaw",
+            each fnPeriodStartFromNum([FiscalPeriodNum], [WeeksInYear], [ExtraWeekPeriod], [Week1Start]),
+            type date
+        ),
+
+    AddPeriodEndRaw =
+        Table.AddColumn(
+            AddPeriodStartRaw,
+            "PeriodEndRaw",
+            each fnPeriodEndFromNum([FiscalPeriodNum], [WeeksInYear], [ExtraWeekPeriod], [Week1Start]),
+            type date
+        ),
+
+    AddPeriodStart =
+        Table.AddColumn(
+            AddPeriodEndRaw,
+            "PeriodStart",
+            each if [PeriodStartRaw] = null then null else (if [PeriodStartRaw] < [YearStart] then [YearStart] else [PeriodStartRaw]),
+            type date
+        ),
+
+    AddPeriodEnd =
+        Table.AddColumn(
+            AddPeriodStart,
+            "PeriodEnd",
+            each if [PeriodEndRaw] = null then null else (if [PeriodEndRaw] > [YearEnd] then [YearEnd] else [PeriodEndRaw]),
+            type date
+        ),
+
+    AddFiscalPeriodDays =
+        Table.AddColumn(
+            AddPeriodEnd,
+            "Fiscal Period Days",
+            each if [PeriodStart] = null or [PeriodEnd] = null then null else Duration.Days([PeriodEnd] - [PeriodStart]) + 1,
+            Int64.Type
+        ),
+
+    AddDayOfFiscalYear =
+        Table.AddColumn(
+            AddFiscalPeriodDays,
+            "Day of the Fiscal Year",
+            each Duration.Days([DateKey] - #date([Fiscal Year], 1, 1)) + 1,
+            Int64.Type
+        ),
+
+    AddDayOfFiscalPeriod =
+        Table.AddColumn(
+            AddDayOfFiscalYear,
+            "Day of the Fiscal Period",
+            each if [PeriodStart] = null then null else Duration.Days([DateKey] - [PeriodStart]) + 1,
+            Int64.Type
+        ),
+
+    AddIsCurrentFY =
+        Table.AddColumn(
+            AddDayOfFiscalPeriod,
+            "IsCurrentFY",
+            each [Fiscal Year] = TodayFY,
+            type logical
+        ),
+
+    AddIsCurrentPeriod =
+        Table.AddColumn(
+            AddIsCurrentFY,
+            "IsCurrentPeriod",
+            each [Fiscal Year] = TodayFY and [FiscalPeriodNum] <> null and [FiscalPeriodNum] = TodayPeriodNum,
+            type logical
+        ),
+
+    AddIsCurrentWeek =
+        Table.AddColumn(
+            AddIsCurrentPeriod,
+            "IsCurrentWeek",
+            each [Fiscal Year] = TodayFY and [FiscalWeekNum] <> null and [FiscalWeekNum] = TodayWeekNum,
+            type logical
+        ),
+
+    AddIsYTD =
+        Table.AddColumn(
+            AddIsCurrentWeek,
+            "IsYTD",
+            each [Fiscal Year] = TodayFY and [DateKey] <= Today,
+            type logical
+        ),
+
+    AddIsPTD =
+        Table.AddColumn(
+            AddIsYTD,
+            "IsPTD",
+            each [Fiscal Year] = TodayFY and [FiscalPeriodNum] <> null and [FiscalPeriodNum] = TodayPeriodNum and [DateKey] <= Today,
+            type logical
+        ),
+
+    AddIsWTD =
+        Table.AddColumn(
+            AddIsPTD,
+            "IsWTD",
+            each [Fiscal Year] = TodayFY and [FiscalWeekNum] <> null and [FiscalWeekNum] = TodayWeekNum and [DateKey] <= Today,
+            type logical
+        ),
+
+    AddFYQQPP =
+        Table.AddColumn(
+            AddIsWTD,
+            "FYQQPP",
+            each
+                if [Fiscal Year] = null or [Fiscal Quarter] = null or [Fiscal Period] = null
+                then null
+                else Text.From([Fiscal Year]) & "-" & [Fiscal Quarter] & "-P" & [Fiscal Period],
+            type text
+        ),
+
+    AddFYQQ =
+        Table.AddColumn(
+            AddFYQQPP,
+            "FYQQ",
+            each if [Fiscal Year] = null or [Fiscal Quarter] = null then null else Text.From([Fiscal Year]) & "-" & [Fiscal Quarter],
+            type text
+        ),
+
+    AddFYPP =
+        Table.AddColumn(
+            AddFYQQ,
+            "FYPP",
+            each if [Fiscal Year] = null or [Fiscal Period] = null then null else Text.From([Fiscal Year]) & "-P" & [Fiscal Period],
+            type text
+        ),
+
+    AddFYWW =
+        Table.AddColumn(
+            AddFYPP,
+            "FYWW",
+            each if [Fiscal Year] = null or [Fiscal Week] = null then null else Text.From([Fiscal Year]) & "-W" & [Fiscal Week],
+            type text
+        ),
+
+    AddFiscalPeriodP = Table.AddColumn(AddFYWW, "Fiscal Period P", each if [Fiscal Period] = null then null else "P" & [Fiscal Period], type text),
+    AddFiscalWeekW = Table.AddColumn(AddFiscalPeriodP, "Fiscal Week W", each if [Fiscal Week] = null then null else "W" & [Fiscal Week], type text),
+
+    Cleanup =
+        Table.RemoveColumns(
+            AddFiscalWeekW,
+            {
+                "WeeksInYear", "ExtraWeekPeriod", "Week1Start", "YearStart", "YearEnd",
+                "FiscalQuarterNum", "FiscalWeekNum", "FiscalPeriodNum",
+                "PeriodStartRaw", "PeriodEndRaw", "PeriodStart", "PeriodEnd"
+            }
+        ),
+
+    Final = Table.Distinct(Cleanup, {"DateKey"})
+in
+    Final

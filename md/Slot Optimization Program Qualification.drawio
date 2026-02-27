@@ -10,8 +10,12 @@
         <mxCell id="OQGYjEQ_GK0_Yntr5sOc-14" parent="WIyWlLk6GJQsqaUBKTNV-1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;u&gt;Qualified:&lt;/u&gt;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;&quot;&gt;&lt;font&gt;An opportunity evaluated and determined as having sufficient readiness, timing alignment, and probability to be penciled into the target quarter and included in open slot coverage reporting, with required actions and risks documented.&lt;/font&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;&lt;u&gt;&lt;/u&gt;&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="120" width="240" x="230" y="-250" as="geometry" />
         </mxCell>
-        <mxCell id="OQGYjEQ_GK0_Yntr5sOc-68" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="OQGYjEQ_GK0_Yntr5sOc-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="OQGYjEQ_GK0_Yntr5sOc-65">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="OQGYjEQ_GK0_Yntr5sOc-96" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="OQGYjEQ_GK0_Yntr5sOc-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="OQGYjEQ_GK0_Yntr5sOc-65">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="350" y="145" />
+            </Array>
+          </mxGeometry>
         </mxCell>
         <mxCell id="OQGYjEQ_GK0_Yntr5sOc-17" parent="WIyWlLk6GJQsqaUBKTNV-1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=default;" value="&lt;div&gt;Document Acceleration Details&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;Account Manager&lt;/b&gt; Update CRM:&lt;/div&gt;&lt;div&gt;CDM Updates&lt;/div&gt;&lt;div&gt;Include required actions, blockers and/or leadership support needed&lt;/div&gt;&lt;div&gt;Example: AccTgtQ126 - Site not ready, requesting service incentive for pull-in to Q1 delivery with ship and hold.&amp;nbsp;&lt;/div&gt;" vertex="1">
           <mxGeometry height="140" width="240" x="230" y="-110" as="geometry" />
@@ -48,29 +52,29 @@
         </mxCell>
         <mxCell id="OQGYjEQ_GK0_Yntr5sOc-59" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="OQGYjEQ_GK0_Yntr5sOc-60" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="OQGYjEQ_GK0_Yntr5sOc-62">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="484" y="287" as="targetPoint" />
+            <mxPoint x="733" y="337" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="OQGYjEQ_GK0_Yntr5sOc-60" parent="WIyWlLk6GJQsqaUBKTNV-1" style="rhombus;whiteSpace=wrap;html=1;" value="&lt;font&gt;Is this Opportunity already slotted?&lt;/font&gt;" vertex="1">
-          <mxGeometry height="80" width="141" x="279.5" y="280" as="geometry" />
+          <mxGeometry height="80" width="141" x="528.5" y="330" as="geometry" />
         </mxCell>
         <mxCell id="OQGYjEQ_GK0_Yntr5sOc-84" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="OQGYjEQ_GK0_Yntr5sOc-61" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="OQGYjEQ_GK0_Yntr5sOc-83">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="OQGYjEQ_GK0_Yntr5sOc-61" parent="WIyWlLk6GJQsqaUBKTNV-1" style="rounded=1;whiteSpace=wrap;html=1;" value="Yes&lt;div&gt;(Different Quarter)&lt;/div&gt;" vertex="1">
-          <mxGeometry height="60" width="120" x="70" y="370" as="geometry" />
+          <mxGeometry height="60" width="120" x="319" y="420" as="geometry" />
         </mxCell>
         <mxCell id="OQGYjEQ_GK0_Yntr5sOc-88" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="OQGYjEQ_GK0_Yntr5sOc-62" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="OQGYjEQ_GK0_Yntr5sOc-85">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="OQGYjEQ_GK0_Yntr5sOc-62" parent="WIyWlLk6GJQsqaUBKTNV-1" style="rounded=1;whiteSpace=wrap;html=1;" value="No" vertex="1">
-          <mxGeometry height="60" width="120" x="480" y="370" as="geometry" />
+          <mxGeometry height="60" width="120" x="729" y="420" as="geometry" />
         </mxCell>
         <mxCell id="OQGYjEQ_GK0_Yntr5sOc-79" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="OQGYjEQ_GK0_Yntr5sOc-65" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="OQGYjEQ_GK0_Yntr5sOc-78">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="OQGYjEQ_GK0_Yntr5sOc-65" parent="WIyWlLk6GJQsqaUBKTNV-1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=default;" value="&lt;div&gt;Pencil into Quarter&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;Sales Manager&lt;/b&gt; Update CRM:&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Special Program = Target Quarter&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Example: 26Q1REV&lt;/span&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="90" width="240" x="230" y="50" as="geometry" />
+          <mxGeometry height="90" width="240" x="479" y="100" as="geometry" />
         </mxCell>
         <mxCell id="OQGYjEQ_GK0_Yntr5sOc-71" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="OQGYjEQ_GK0_Yntr5sOc-70" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="OQGYjEQ_GK0_Yntr5sOc-22">
           <mxGeometry relative="1" as="geometry" />
@@ -91,25 +95,25 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="OQGYjEQ_GK0_Yntr5sOc-78" parent="WIyWlLk6GJQsqaUBKTNV-1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" value="Sales confidence and deal progression have reached the threshold required to submit for reservation approval." vertex="1">
-          <mxGeometry height="100" width="200" x="250" y="160" as="geometry" />
+          <mxGeometry height="100" width="200" x="499" y="210" as="geometry" />
         </mxCell>
         <mxCell id="OQGYjEQ_GK0_Yntr5sOc-94" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="OQGYjEQ_GK0_Yntr5sOc-83" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="OQGYjEQ_GK0_Yntr5sOc-93">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="OQGYjEQ_GK0_Yntr5sOc-83" parent="WIyWlLk6GJQsqaUBKTNV-1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=default;" value="&lt;div&gt;Reservation is created&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;Account Manager&lt;/b&gt;&amp;nbsp;submits reservation approval request for new quarter, specifying this is a pencil slot change&lt;br&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="90" width="240" x="10" y="450" as="geometry" />
+          <mxGeometry height="90" width="240" x="259" y="500" as="geometry" />
         </mxCell>
         <mxCell id="OQGYjEQ_GK0_Yntr5sOc-92" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="OQGYjEQ_GK0_Yntr5sOc-85" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="OQGYjEQ_GK0_Yntr5sOc-91">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="OQGYjEQ_GK0_Yntr5sOc-85" parent="WIyWlLk6GJQsqaUBKTNV-1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=default;" value="&lt;div&gt;Reservation is created&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;Account Manager&lt;/b&gt;&amp;nbsp;submits reservation approval request&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;specifying this is a pencil&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="90" width="240" x="420.5" y="450" as="geometry" />
+          <mxGeometry height="90" width="240" x="669.5" y="500" as="geometry" />
         </mxCell>
         <mxCell id="OQGYjEQ_GK0_Yntr5sOc-91" parent="WIyWlLk6GJQsqaUBKTNV-1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=default;" value="&lt;div&gt;Reservation is approved&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;CDM Team&lt;/b&gt;&amp;nbsp;approves reservation and removes the Special Program&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp;pencil tag&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="90" width="240" x="420" y="560" as="geometry" />
+          <mxGeometry height="90" width="240" x="669" y="610" as="geometry" />
         </mxCell>
         <mxCell id="OQGYjEQ_GK0_Yntr5sOc-93" parent="WIyWlLk6GJQsqaUBKTNV-1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=default;" value="&lt;div&gt;Reservation is approved&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;CDM Team&lt;/b&gt;&amp;nbsp;approves reservation and removes the Special Program&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp;pencil tag&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="90" width="240" x="10" y="560" as="geometry" />
+          <mxGeometry height="90" width="240" x="259" y="610" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

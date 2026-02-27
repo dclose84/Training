@@ -25,13 +25,13 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="OQGYjEQ_GK0_Yntr5sOc-14" parent="WIyWlLk6GJQsqaUBKTNV-1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;u&gt;Qualified:&lt;/u&gt;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;&quot;&gt;&lt;font&gt;An opportunity evaluated and determined as having sufficient readiness, timing alignment, and probability to be penciled into the target quarter and included in open slot coverage reporting, with required actions and risks documented.&lt;/font&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;&lt;u&gt;&lt;/u&gt;&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="120" width="240" x="250" y="110" as="geometry" />
+          <mxGeometry height="120" width="240" x="250" y="120" as="geometry" />
         </mxCell>
         <mxCell id="OQGYjEQ_GK0_Yntr5sOc-37" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="OQGYjEQ_GK0_Yntr5sOc-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="OQGYjEQ_GK0_Yntr5sOc-36">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="OQGYjEQ_GK0_Yntr5sOc-17" parent="WIyWlLk6GJQsqaUBKTNV-1" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;div&gt;Document Acceleration Details&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;Account Manager&lt;/b&gt; Update CRM:&lt;/div&gt;&lt;div&gt;CDM Updates&lt;/div&gt;&lt;div&gt;Include required actions, blockers and/or leadership support needed&lt;/div&gt;&lt;div&gt;Example: AccTgtQ126 - Site ready, requesting service incentive for pull-in to Q1 delivery&lt;/div&gt;" vertex="1">
-          <mxGeometry height="150" width="240" x="250" y="270" as="geometry" />
+        <mxCell id="OQGYjEQ_GK0_Yntr5sOc-17" parent="WIyWlLk6GJQsqaUBKTNV-1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=default;" value="&lt;div&gt;Document Acceleration Details&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;Account Manager&lt;/b&gt; Update CRM:&lt;/div&gt;&lt;div&gt;CDM Updates&lt;/div&gt;&lt;div&gt;Include required actions, blockers and/or leadership support needed&lt;/div&gt;&lt;div&gt;Example: AccTgtQ126 - Site not ready, requesting service incentive for pull-in to Q1 delivery with ship and hold.&amp;nbsp;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="140" width="240" x="250" y="290" as="geometry" />
         </mxCell>
         <mxCell id="OQGYjEQ_GK0_Yntr5sOc-33" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="OQGYjEQ_GK0_Yntr5sOc-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="OQGYjEQ_GK0_Yntr5sOc-32">
           <mxGeometry relative="1" as="geometry" />
@@ -51,11 +51,14 @@
         <mxCell id="OQGYjEQ_GK0_Yntr5sOc-32" parent="WIyWlLk6GJQsqaUBKTNV-1" style="whiteSpace=wrap;html=1;" value="&lt;div&gt;Candidate Tagging&lt;/div&gt;&lt;div&gt;&lt;b&gt;Sales Manager&lt;/b&gt; applies the AccTgtQ#YY (AccTgtQ226) tag in CRM &amp;gt; CDM Updates to designate the opportunity as a candidate for the target quarter’s open slot.&lt;/div&gt;" vertex="1">
           <mxGeometry height="130" width="210" x="480" y="-140" as="geometry" />
         </mxCell>
-        <mxCell id="OQGYjEQ_GK0_Yntr5sOc-36" parent="WIyWlLk6GJQsqaUBKTNV-1" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;div&gt;Pencil into Quarter&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;Sales Manager&lt;/b&gt; Update CRM:&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Special Program = Target Quarter&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;(eg. 26Q1REV)&lt;/span&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="190" width="240" x="250" y="470" as="geometry" />
+        <mxCell id="OQGYjEQ_GK0_Yntr5sOc-36" parent="WIyWlLk6GJQsqaUBKTNV-1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=default;" value="&lt;div&gt;Pencil into Quarter&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;Sales Manager&lt;/b&gt; Update CRM:&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Special Program = Target Quarter&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Example: 26Q1REV&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="150" width="240" x="250" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="OQGYjEQ_GK0_Yntr5sOc-52" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="OQGYjEQ_GK0_Yntr5sOc-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="OQGYjEQ_GK0_Yntr5sOc-51">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="OQGYjEQ_GK0_Yntr5sOc-39" parent="WIyWlLk6GJQsqaUBKTNV-1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;u&gt;Disqualified:&lt;/u&gt;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;&quot;&gt;&lt;font&gt;An opportunity evaluated and determined not viable for the target quarter due to timing, customer readiness, probability, or other constraints, with rationale documented and excluded from current open slot coverage.&lt;/font&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;&lt;u&gt;&lt;/u&gt;&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="120" width="240" x="694" y="110" as="geometry" />
+          <mxGeometry height="120" width="240" x="694" y="120" as="geometry" />
         </mxCell>
         <mxCell id="OQGYjEQ_GK0_Yntr5sOc-43" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="OQGYjEQ_GK0_Yntr5sOc-47" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="OQGYjEQ_GK0_Yntr5sOc-48" value="">
           <mxGeometry relative="1" as="geometry" />
@@ -79,6 +82,9 @@
         </mxCell>
         <mxCell id="OQGYjEQ_GK0_Yntr5sOc-49" parent="WIyWlLk6GJQsqaUBKTNV-1" style="rounded=1;whiteSpace=wrap;html=1;" value="No" vertex="1">
           <mxGeometry height="60" width="120" x="814" y="947" as="geometry" />
+        </mxCell>
+        <mxCell id="OQGYjEQ_GK0_Yntr5sOc-51" parent="WIyWlLk6GJQsqaUBKTNV-1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=default;" value="&lt;div&gt;Document Rationale&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;Account Manager&lt;/b&gt; Update CRM:&lt;/div&gt;&lt;div&gt;CDM Updates and append with &quot;DQ&quot;&amp;nbsp;tag&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;detailing why not viable for target quarter&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Example: AccTgtQ126DQ - Site readiness, site is not ready until Q3-2026, unwilling to ship and hold.&amp;nbsp;&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="140" width="240" x="694" y="290" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

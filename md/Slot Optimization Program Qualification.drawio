@@ -60,6 +60,9 @@
         <mxCell id="OQGYjEQ_GK0_Yntr5sOc-61" parent="WIyWlLk6GJQsqaUBKTNV-1" style="rounded=1;whiteSpace=wrap;html=1;" value="Yes&lt;div&gt;(Different Quarter)&lt;/div&gt;" vertex="1">
           <mxGeometry height="60" width="120" x="70" y="370" as="geometry" />
         </mxCell>
+        <mxCell id="OQGYjEQ_GK0_Yntr5sOc-88" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="OQGYjEQ_GK0_Yntr5sOc-62" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="OQGYjEQ_GK0_Yntr5sOc-85">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="OQGYjEQ_GK0_Yntr5sOc-62" parent="WIyWlLk6GJQsqaUBKTNV-1" style="rounded=1;whiteSpace=wrap;html=1;" value="No" vertex="1">
           <mxGeometry height="60" width="120" x="480" y="370" as="geometry" />
         </mxCell>
@@ -90,8 +93,23 @@
         <mxCell id="OQGYjEQ_GK0_Yntr5sOc-78" parent="WIyWlLk6GJQsqaUBKTNV-1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" value="Sales confidence and deal progression have reached the threshold required to submit for reservation approval." vertex="1">
           <mxGeometry height="100" width="200" x="250" y="160" as="geometry" />
         </mxCell>
-        <mxCell id="OQGYjEQ_GK0_Yntr5sOc-83" parent="WIyWlLk6GJQsqaUBKTNV-1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=default;" value="&lt;div&gt;Reservation is created&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;Account Manager&lt;/b&gt;&amp;nbsp;submits reservation approval request&lt;br&gt;&lt;/div&gt;" vertex="1">
+        <mxCell id="OQGYjEQ_GK0_Yntr5sOc-94" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="OQGYjEQ_GK0_Yntr5sOc-83" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="OQGYjEQ_GK0_Yntr5sOc-93">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="OQGYjEQ_GK0_Yntr5sOc-83" parent="WIyWlLk6GJQsqaUBKTNV-1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=default;" value="&lt;div&gt;Reservation is created&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;Account Manager&lt;/b&gt;&amp;nbsp;submits reservation approval request for new quarter, specifying this is a pencil slot change&lt;br&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="90" width="240" x="10" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="OQGYjEQ_GK0_Yntr5sOc-92" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="OQGYjEQ_GK0_Yntr5sOc-85" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="OQGYjEQ_GK0_Yntr5sOc-91">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="OQGYjEQ_GK0_Yntr5sOc-85" parent="WIyWlLk6GJQsqaUBKTNV-1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=default;" value="&lt;div&gt;Reservation is created&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;Account Manager&lt;/b&gt;&amp;nbsp;submits reservation approval request&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;specifying this is a pencil&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="240" x="420.5" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="OQGYjEQ_GK0_Yntr5sOc-91" parent="WIyWlLk6GJQsqaUBKTNV-1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=default;" value="&lt;div&gt;Reservation is approved&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;CDM Team&lt;/b&gt;&amp;nbsp;approves reservation and removes the Special Program&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp;pencil tag&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="240" x="420" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="OQGYjEQ_GK0_Yntr5sOc-93" parent="WIyWlLk6GJQsqaUBKTNV-1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=default;" value="&lt;div&gt;Reservation is approved&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;CDM Team&lt;/b&gt;&amp;nbsp;approves reservation and removes the Special Program&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp;pencil tag&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="240" x="10" y="560" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

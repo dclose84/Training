@@ -1,5 +1,5 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0" version="29.6.0">
-  <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0" version="29.6.0" pages="2">
+  <diagram id="C5RBs43oDa-KdzZeNtuy" name="Portrait">
     <mxGraphModel dx="1477" dy="1598" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
@@ -114,6 +114,126 @@
         </mxCell>
         <mxCell id="OQGYjEQ_GK0_Yntr5sOc-93" parent="WIyWlLk6GJQsqaUBKTNV-1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=default;" value="&lt;div&gt;Reservation is approved&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;CDM Team&lt;/b&gt;&amp;nbsp;approves reservation and removes the Special Program&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp;pencil tag&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="90" width="240" x="259" y="610" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="Landscape" id="eQ4fStATkPxs3RwnRylu">
+    <mxGraphModel dx="1591" dy="1658" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="3lcGd-KhKPB7DJeHq5dz-0" />
+        <mxCell id="3lcGd-KhKPB7DJeHq5dz-1" parent="3lcGd-KhKPB7DJeHq5dz-0" />
+        <mxCell id="3lcGd-KhKPB7DJeHq5dz-2" edge="1" parent="3lcGd-KhKPB7DJeHq5dz-1" source="3lcGd-KhKPB7DJeHq5dz-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="3lcGd-KhKPB7DJeHq5dz-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3lcGd-KhKPB7DJeHq5dz-6" edge="1" parent="3lcGd-KhKPB7DJeHq5dz-1" source="3lcGd-KhKPB7DJeHq5dz-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="3lcGd-KhKPB7DJeHq5dz-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3lcGd-KhKPB7DJeHq5dz-7" parent="3lcGd-KhKPB7DJeHq5dz-1" style="whiteSpace=wrap;html=1;" value="Pre-Qualification Assessment&lt;div&gt;&lt;b&gt;Sales Manager&lt;/b&gt; evaluates readiness, timing and probability for inclusion in open slot coverage&lt;/div&gt;" vertex="1">
+          <mxGeometry height="200" width="140" x="180" y="-520" as="geometry" />
+        </mxCell>
+        <mxCell id="3lcGd-KhKPB7DJeHq5dz-8" edge="1" parent="3lcGd-KhKPB7DJeHq5dz-1" source="3lcGd-KhKPB7DJeHq5dz-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="3lcGd-KhKPB7DJeHq5dz-28">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3lcGd-KhKPB7DJeHq5dz-9" parent="3lcGd-KhKPB7DJeHq5dz-1" style="whiteSpace=wrap;html=1;" value="&lt;div&gt;Candidate Tagging&lt;/div&gt;&lt;div&gt;&lt;b&gt;Sales Manager&lt;/b&gt; applies the AccTgtQ#YYA (AccTgtQ226A) tag in CRM &amp;gt; CDM Updates to designate the opportunity as a candidate for the target quarter’s open slot.&lt;/div&gt;" vertex="1">
+          <mxGeometry height="200" width="140" x="350" y="-520" as="geometry" />
+        </mxCell>
+        <mxCell id="3lcGd-KhKPB7DJeHq5dz-10" edge="1" parent="3lcGd-KhKPB7DJeHq5dz-1" source="3lcGd-KhKPB7DJeHq5dz-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="3lcGd-KhKPB7DJeHq5dz-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3lcGd-KhKPB7DJeHq5dz-11" parent="3lcGd-KhKPB7DJeHq5dz-1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;u&gt;Disqualified:&lt;/u&gt;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;&quot;&gt;&lt;font&gt;An opportunity evaluated and determined not viable for the target quarter due to timing, customer readiness, probability, or other constraints, with rationale documented and excluded from current open slot coverage.&lt;/font&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;&lt;u&gt;&lt;/u&gt;&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="200" width="170" x="640" y="-340" as="geometry" />
+        </mxCell>
+        <mxCell id="3lcGd-KhKPB7DJeHq5dz-12" parent="3lcGd-KhKPB7DJeHq5dz-1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=default;" value="&lt;div&gt;Document Rationale&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;Account Manager&lt;/b&gt; Update CRM:&lt;/div&gt;&lt;div&gt;CDM Updates and append with &quot;DQ&quot;&amp;nbsp;tag&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;detailing why not viable for target quarter&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Example: AccTgtQ126N - Site readiness, site is not ready until Q3-2026, no space for ship and hold.&amp;nbsp;&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="200" width="171" x="830" y="-340" as="geometry" />
+        </mxCell>
+        <mxCell id="3lcGd-KhKPB7DJeHq5dz-13" edge="1" parent="3lcGd-KhKPB7DJeHq5dz-1" source="3lcGd-KhKPB7DJeHq5dz-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="3lcGd-KhKPB7DJeHq5dz-19" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3lcGd-KhKPB7DJeHq5dz-14" edge="1" parent="3lcGd-KhKPB7DJeHq5dz-1" source="3lcGd-KhKPB7DJeHq5dz-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="3lcGd-KhKPB7DJeHq5dz-19" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3lcGd-KhKPB7DJeHq5dz-15" edge="1" parent="3lcGd-KhKPB7DJeHq5dz-1" source="3lcGd-KhKPB7DJeHq5dz-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="3lcGd-KhKPB7DJeHq5dz-19" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3lcGd-KhKPB7DJeHq5dz-16" edge="1" parent="3lcGd-KhKPB7DJeHq5dz-1" source="3lcGd-KhKPB7DJeHq5dz-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="3lcGd-KhKPB7DJeHq5dz-21">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="733" y="337" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3lcGd-KhKPB7DJeHq5dz-17" parent="3lcGd-KhKPB7DJeHq5dz-1" style="rhombus;whiteSpace=wrap;html=1;" value="&lt;font&gt;Is this Opportunity already slotted?&lt;/font&gt;" vertex="1">
+          <mxGeometry height="80" width="141" x="230" y="374" as="geometry" />
+        </mxCell>
+        <mxCell id="3lcGd-KhKPB7DJeHq5dz-18" edge="1" parent="3lcGd-KhKPB7DJeHq5dz-1" source="3lcGd-KhKPB7DJeHq5dz-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="3lcGd-KhKPB7DJeHq5dz-32">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3lcGd-KhKPB7DJeHq5dz-19" parent="3lcGd-KhKPB7DJeHq5dz-1" style="rounded=1;whiteSpace=wrap;html=1;" value="Yes&lt;div&gt;(Different Quarter)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="240.5" y="265" as="geometry" />
+        </mxCell>
+        <mxCell id="3lcGd-KhKPB7DJeHq5dz-20" edge="1" parent="3lcGd-KhKPB7DJeHq5dz-1" source="3lcGd-KhKPB7DJeHq5dz-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="3lcGd-KhKPB7DJeHq5dz-34">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3lcGd-KhKPB7DJeHq5dz-21" parent="3lcGd-KhKPB7DJeHq5dz-1" style="rounded=1;whiteSpace=wrap;html=1;" value="No" vertex="1">
+          <mxGeometry height="60" width="120" x="240.5" y="510" as="geometry" />
+        </mxCell>
+        <mxCell id="3lcGd-KhKPB7DJeHq5dz-23" parent="3lcGd-KhKPB7DJeHq5dz-1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=default;" value="&lt;div&gt;Pencil into Quarter&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;Sales Manager&lt;/b&gt; Update CRM:&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Special Program = Target Quarter&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Example: 26Q1REV&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="200" width="140" x="1029" y="-710" as="geometry" />
+        </mxCell>
+        <mxCell id="3lcGd-KhKPB7DJeHq5dz-24" edge="1" parent="3lcGd-KhKPB7DJeHq5dz-1" source="3lcGd-KhKPB7DJeHq5dz-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="3lcGd-KhKPB7DJeHq5dz-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3lcGd-KhKPB7DJeHq5dz-25" parent="3lcGd-KhKPB7DJeHq5dz-1" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" value="&lt;div&gt;Identify Candidate&lt;/div&gt;&lt;div&gt;&lt;b&gt;Sales Manager&lt;/b&gt;&amp;nbsp;reviews opportunities for potential to be penciled into the target quarter&lt;/div&gt;" vertex="1">
+          <mxGeometry height="200" width="150" y="-520" as="geometry" />
+        </mxCell>
+        <mxCell id="wAscbSygslp_EnxE0lvs-3" edge="1" parent="3lcGd-KhKPB7DJeHq5dz-1" source="3lcGd-KhKPB7DJeHq5dz-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="3lcGd-KhKPB7DJeHq5dz-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="599" y="-610" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wAscbSygslp_EnxE0lvs-4" edge="1" parent="3lcGd-KhKPB7DJeHq5dz-1" source="3lcGd-KhKPB7DJeHq5dz-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="3lcGd-KhKPB7DJeHq5dz-11">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="599" y="-240" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3lcGd-KhKPB7DJeHq5dz-28" parent="3lcGd-KhKPB7DJeHq5dz-1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" value="&lt;b&gt;Account Manager&amp;nbsp;&lt;/b&gt;&lt;div&gt;Qualifies the candidate&lt;/div&gt;" vertex="1">
+          <mxGeometry height="100" width="150" x="524" y="-470" as="geometry" />
+        </mxCell>
+        <mxCell id="3lcGd-KhKPB7DJeHq5dz-29" edge="1" parent="3lcGd-KhKPB7DJeHq5dz-1" source="3lcGd-KhKPB7DJeHq5dz-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="3lcGd-KhKPB7DJeHq5dz-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3lcGd-KhKPB7DJeHq5dz-30" parent="3lcGd-KhKPB7DJeHq5dz-1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" value="Sales confidence and deal progression have reached the threshold required to submit for reservation approval." vertex="1">
+          <mxGeometry height="100" width="200" y="364" as="geometry" />
+        </mxCell>
+        <mxCell id="3lcGd-KhKPB7DJeHq5dz-31" edge="1" parent="3lcGd-KhKPB7DJeHq5dz-1" source="3lcGd-KhKPB7DJeHq5dz-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="3lcGd-KhKPB7DJeHq5dz-36">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3lcGd-KhKPB7DJeHq5dz-32" parent="3lcGd-KhKPB7DJeHq5dz-1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=default;" value="&lt;div&gt;Reservation is created&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;Account Manager&lt;/b&gt;&amp;nbsp;submits reservation approval request for new quarter, specifying this is a pencil slot change&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="240" x="400" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="3lcGd-KhKPB7DJeHq5dz-33" edge="1" parent="3lcGd-KhKPB7DJeHq5dz-1" source="3lcGd-KhKPB7DJeHq5dz-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="3lcGd-KhKPB7DJeHq5dz-35">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3lcGd-KhKPB7DJeHq5dz-34" parent="3lcGd-KhKPB7DJeHq5dz-1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=default;" value="&lt;div&gt;Reservation is created&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;Account Manager&lt;/b&gt;&amp;nbsp;submits reservation approval request&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;specifying this is a pencil&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="240" x="400" y="495" as="geometry" />
+        </mxCell>
+        <mxCell id="3lcGd-KhKPB7DJeHq5dz-35" parent="3lcGd-KhKPB7DJeHq5dz-1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=default;" value="&lt;div&gt;Reservation is approved&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;CDM Team&lt;/b&gt;&amp;nbsp;approves reservation and removes the Special Program&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp;pencil tag&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="240" x="680" y="495" as="geometry" />
+        </mxCell>
+        <mxCell id="3lcGd-KhKPB7DJeHq5dz-36" parent="3lcGd-KhKPB7DJeHq5dz-1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=default;" value="&lt;div&gt;Reservation is approved&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;CDM Team&lt;/b&gt;&amp;nbsp;approves reservation and removes the Special Program&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp;pencil tag&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="240" x="680" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="3lcGd-KhKPB7DJeHq5dz-3" parent="3lcGd-KhKPB7DJeHq5dz-1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;u&gt;Qualified:&lt;/u&gt;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;&quot;&gt;&lt;font&gt;An opportunity evaluated and determined as having sufficient readiness, timing alignment, and probability to be penciled into the target quarter and included in open slot coverage reporting, with required actions and risks documented.&lt;/font&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;&lt;u&gt;&lt;/u&gt;&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="200" width="170" x="640" y="-710" as="geometry" />
+        </mxCell>
+        <mxCell id="wAscbSygslp_EnxE0lvs-5" edge="1" parent="3lcGd-KhKPB7DJeHq5dz-1" source="3lcGd-KhKPB7DJeHq5dz-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="3lcGd-KhKPB7DJeHq5dz-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3lcGd-KhKPB7DJeHq5dz-5" parent="3lcGd-KhKPB7DJeHq5dz-1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=default;" value="&lt;div&gt;Document Acceleration Details&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;Account Manager&lt;/b&gt; Update CRM:&lt;/div&gt;&lt;div&gt;CDM Updates&lt;/div&gt;&lt;div&gt;Include required actions, blockers and/or leadership support needed&lt;/div&gt;&lt;div&gt;Example: AccTgtQ126Y - Site not ready, requesting service incentive for pull-in to Q1 delivery with ship and hold.&amp;nbsp;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="200" width="171" x="830" y="-710" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

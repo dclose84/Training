@@ -294,7 +294,7 @@
         <mxCell id="W0KkOD6p92tpY4YSbSEx-20" edge="1" parent="fX_P5yidGhzRTXg3KtyP-17" source="W0KkOD6p92tpY4YSbSEx-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;" target="W0KkOD6p92tpY4YSbSEx-19">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="W0KkOD6p92tpY4YSbSEx-18" parent="fX_P5yidGhzRTXg3KtyP-17" style="ellipse;whiteSpace=wrap;html=1;" value="Identify Candidates" vertex="1">
+        <mxCell id="W0KkOD6p92tpY4YSbSEx-18" parent="fX_P5yidGhzRTXg3KtyP-17" style="ellipse;whiteSpace=wrap;html=1;" value="Update to BU Process Owner&lt;div&gt;Identify Candidates&lt;/div&gt;" vertex="1">
           <mxGeometry height="80" width="80" x="30" y="40" as="geometry" />
         </mxCell>
         <mxCell id="W0KkOD6p92tpY4YSbSEx-19" parent="fX_P5yidGhzRTXg3KtyP-17" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" value="Candidate Tagging in CRM" vertex="1">

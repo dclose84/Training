@@ -451,12 +451,12 @@
     </mxGraphModel>
   </diagram>
   <diagram name="Ideal SwimLane" id="z0piHVoCvejEF1w-m_TR">
-    <mxGraphModel dx="1148" dy="498" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="948" dy="498" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="1L6OVC_0_INvwi2zg3E6-0" />
         <mxCell id="1L6OVC_0_INvwi2zg3E6-1" parent="1L6OVC_0_INvwi2zg3E6-0" />
         <mxCell id="1L6OVC_0_INvwi2zg3E6-2" parent="1L6OVC_0_INvwi2zg3E6-1" style="swimlane;html=1;childLayout=stackLayout;resizeParent=1;resizeParentMax=0;horizontal=0;startSize=20;horizontalStack=0;" value="Pool" vertex="1">
-          <mxGeometry height="630" width="910" x="150" y="170" as="geometry" />
+          <mxGeometry height="470" width="910" x="150" y="170" as="geometry" />
         </mxCell>
         <mxCell id="1L6OVC_0_INvwi2zg3E6-3" parent="1L6OVC_0_INvwi2zg3E6-2" style="swimlane;html=1;startSize=20;horizontal=0;" value="Business Process Owner" vertex="1">
           <mxGeometry height="150" width="890" x="20" as="geometry" />
@@ -476,7 +476,7 @@
         <mxCell id="1L6OVC_0_INvwi2zg3E6-20" parent="1L6OVC_0_INvwi2zg3E6-3" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" value="Pencil into Quarter" vertex="1">
           <mxGeometry height="60" width="120" x="530" y="40" as="geometry" />
         </mxCell>
-        <mxCell id="1L6OVC_0_INvwi2zg3E6-22" edge="1" parent="1L6OVC_0_INvwi2zg3E6-3" source="1L6OVC_0_INvwi2zg3E6-11" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;dashed=1;" target="1L6OVC_0_INvwi2zg3E6-20" value="">
+        <mxCell id="1L6OVC_0_INvwi2zg3E6-22" edge="1" parent="1L6OVC_0_INvwi2zg3E6-3" source="1L6OVC_0_INvwi2zg3E6-11" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="1L6OVC_0_INvwi2zg3E6-20" value="">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="240" y="155" as="sourcePoint" />
             <mxPoint x="340" y="155" as="targetPoint" />
@@ -502,29 +502,20 @@
         <mxCell id="1L6OVC_0_INvwi2zg3E6-14" parent="1L6OVC_0_INvwi2zg3E6-7" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" value="Reservation Approval is Submitted" vertex="1">
           <mxGeometry height="60" width="120" x="670" y="50" as="geometry" />
         </mxCell>
+        <mxCell id="UWOSx9IY230SlrYNLlli-22" parent="1L6OVC_0_INvwi2zg3E6-7" style="shape=message;html=1;outlineConnect=0;" value="" vertex="1">
+          <mxGeometry height="14" width="20" x="420" y="10" as="geometry" />
+        </mxCell>
         <mxCell id="1L6OVC_0_INvwi2zg3E6-15" parent="1L6OVC_0_INvwi2zg3E6-2" style="swimlane;html=1;startSize=20;horizontal=0;" value="CDM" vertex="1">
           <mxGeometry height="160" width="890" x="20" y="310" as="geometry" />
         </mxCell>
         <mxCell id="1L6OVC_0_INvwi2zg3E6-16" parent="1L6OVC_0_INvwi2zg3E6-15" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" value="Reservation is Approved&amp;nbsp;" vertex="1">
           <mxGeometry height="60" width="120" x="760" y="50" as="geometry" />
         </mxCell>
-        <mxCell id="UWOSx9IY230SlrYNLlli-8" parent="1L6OVC_0_INvwi2zg3E6-2" style="swimlane;html=1;startSize=20;horizontal=0;" value="CDM" vertex="1">
-          <mxGeometry height="160" width="890" x="20" y="470" as="geometry" />
-        </mxCell>
-        <mxCell id="UWOSx9IY230SlrYNLlli-9" parent="UWOSx9IY230SlrYNLlli-8" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" value="Reservation is Approved&amp;nbsp;" vertex="1">
-          <mxGeometry height="60" width="120" x="760" y="50" as="geometry" />
-        </mxCell>
-        <mxCell id="UWOSx9IY230SlrYNLlli-10" edge="1" parent="UWOSx9IY230SlrYNLlli-8" source="UWOSx9IY230SlrYNLlli-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;" target="UWOSx9IY230SlrYNLlli-12">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="UWOSx9IY230SlrYNLlli-11" parent="UWOSx9IY230SlrYNLlli-8" style="ellipse;whiteSpace=wrap;html=1;" value="&lt;div&gt;Identify Candidates&lt;/div&gt;" vertex="1">
-          <mxGeometry height="80" width="80" x="30" y="40" as="geometry" />
-        </mxCell>
-        <mxCell id="UWOSx9IY230SlrYNLlli-12" parent="UWOSx9IY230SlrYNLlli-8" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" value="Candidate Tagging in CRM" vertex="1">
-          <mxGeometry height="60" width="120" x="150" y="50" as="geometry" />
-        </mxCell>
-        <mxCell id="UWOSx9IY230SlrYNLlli-13" parent="UWOSx9IY230SlrYNLlli-8" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" value="Pencil into Quarter" vertex="1">
-          <mxGeometry height="60" width="120" x="390" y="50" as="geometry" />
+        <mxCell id="UWOSx9IY230SlrYNLlli-21" edge="1" parent="1L6OVC_0_INvwi2zg3E6-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="1L6OVC_0_INvwi2zg3E6-11" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="360" y="-80" as="sourcePoint" />
+            <mxPoint x="390" y="50" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="1L6OVC_0_INvwi2zg3E6-21" edge="1" parent="1L6OVC_0_INvwi2zg3E6-2" source="1L6OVC_0_INvwi2zg3E6-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="1L6OVC_0_INvwi2zg3E6-9" value="">
           <mxGeometry relative="1" as="geometry">

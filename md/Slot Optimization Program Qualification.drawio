@@ -451,7 +451,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="Ideal SwimLane" id="z0piHVoCvejEF1w-m_TR">
-    <mxGraphModel dx="1377" dy="598" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="1148" dy="498" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="1L6OVC_0_INvwi2zg3E6-0" />
         <mxCell id="1L6OVC_0_INvwi2zg3E6-1" parent="1L6OVC_0_INvwi2zg3E6-0" />
@@ -476,7 +476,7 @@
         <mxCell id="1L6OVC_0_INvwi2zg3E6-20" parent="1L6OVC_0_INvwi2zg3E6-3" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" value="Pencil into Quarter" vertex="1">
           <mxGeometry height="60" width="120" x="530" y="40" as="geometry" />
         </mxCell>
-        <mxCell id="1L6OVC_0_INvwi2zg3E6-22" edge="1" parent="1L6OVC_0_INvwi2zg3E6-3" source="1L6OVC_0_INvwi2zg3E6-11" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;dashed=1;" target="1L6OVC_0_INvwi2zg3E6-20" value="">
+        <mxCell id="1L6OVC_0_INvwi2zg3E6-22" edge="1" parent="1L6OVC_0_INvwi2zg3E6-3" source="1L6OVC_0_INvwi2zg3E6-11" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;dashed=1;" target="1L6OVC_0_INvwi2zg3E6-20" value="">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="240" y="155" as="sourcePoint" />
             <mxPoint x="340" y="155" as="targetPoint" />
@@ -484,7 +484,7 @@
         </mxCell>
         <mxCell id="1L6OVC_0_INvwi2zg3E6-23" parent="1L6OVC_0_INvwi2zg3E6-22" style="shape=message;html=1;outlineConnect=0;" value="" vertex="1">
           <mxGeometry height="14" relative="1" width="20" as="geometry">
-            <mxPoint x="-10" y="10" as="offset" />
+            <mxPoint x="-310" y="90" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="1L6OVC_0_INvwi2zg3E6-7" parent="1L6OVC_0_INvwi2zg3E6-2" style="swimlane;html=1;startSize=20;horizontal=0;" value="Account Manager" vertex="1">
@@ -538,9 +538,6 @@
               <mxPoint x="750" y="380" />
             </Array>
           </mxGeometry>
-        </mxCell>
-        <mxCell id="1L6OVC_0_INvwi2zg3E6-8" edge="1" parent="1L6OVC_0_INvwi2zg3E6-2" source="1L6OVC_0_INvwi2zg3E6-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="1L6OVC_0_INvwi2zg3E6-11" value="">
-          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="1L6OVC_0_INvwi2zg3E6-10" edge="1" parent="1L6OVC_0_INvwi2zg3E6-2" source="1L6OVC_0_INvwi2zg3E6-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;dashPattern=8 4 1 4;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="1L6OVC_0_INvwi2zg3E6-13" value="">
           <mxGeometry relative="1" as="geometry" />

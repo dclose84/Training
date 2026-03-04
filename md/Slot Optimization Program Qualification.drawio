@@ -239,7 +239,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="Ideal State Landscape" id="57qFXU2X5HSySzNTVb8M">
-    <mxGraphModel dx="1137" dy="1425" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="1421" dy="1575" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="AIaXv6DZz44kBHJuBskx-0" />
         <mxCell id="AIaXv6DZz44kBHJuBskx-1" parent="AIaXv6DZz44kBHJuBskx-0" />
@@ -331,13 +331,13 @@
         <mxCell id="AIaXv6DZz44kBHJuBskx-27" edge="1" parent="AIaXv6DZz44kBHJuBskx-1" source="AIaXv6DZz44kBHJuBskx-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="AIaXv6DZz44kBHJuBskx-32">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="AIaXv6DZz44kBHJuBskx-28" parent="AIaXv6DZz44kBHJuBskx-1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=default;" value="&lt;div&gt;Reservation is created&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;u&gt;&lt;b&gt;Account Manager&lt;/b&gt;&amp;nbsp;&lt;/u&gt;&lt;/div&gt;&lt;div&gt;submits reservation approval request for new quarter, specifying this is a pencil slot change&lt;br&gt;&lt;/div&gt;" vertex="1">
+        <mxCell id="AIaXv6DZz44kBHJuBskx-28" parent="AIaXv6DZz44kBHJuBskx-1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=default;" value="&lt;div&gt;Reservation is created&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;u&gt;&lt;b&gt;Account Manager&lt;/b&gt;&amp;nbsp;&lt;/u&gt;&lt;/div&gt;&lt;div&gt;submits reservation approval request for new quarter, specifying this is a slot change&lt;br&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="90" width="240" x="400" y="250" as="geometry" />
         </mxCell>
         <mxCell id="AIaXv6DZz44kBHJuBskx-29" edge="1" parent="AIaXv6DZz44kBHJuBskx-1" source="AIaXv6DZz44kBHJuBskx-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="AIaXv6DZz44kBHJuBskx-31">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="AIaXv6DZz44kBHJuBskx-30" parent="AIaXv6DZz44kBHJuBskx-1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=default;" value="&lt;div&gt;Reservation is created&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;u&gt;Account Manager&lt;/u&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;submits reservation approval request&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;specifying this is a pencil&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+        <mxCell id="AIaXv6DZz44kBHJuBskx-30" parent="AIaXv6DZz44kBHJuBskx-1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=default;" value="&lt;div&gt;Reservation is created&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;u&gt;Account Manager&lt;/u&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;submits reservation approval request&lt;br&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="90" width="240" x="400" y="495" as="geometry" />
         </mxCell>
         <mxCell id="AIaXv6DZz44kBHJuBskx-31" parent="AIaXv6DZz44kBHJuBskx-1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=default;" value="&lt;div&gt;Reservation is approved&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;u&gt;&lt;b&gt;CDM Team&amp;nbsp;&lt;/b&gt;&lt;/u&gt;&lt;/div&gt;&lt;div&gt;approves reservation&lt;br&gt;&lt;/div&gt;" vertex="1">

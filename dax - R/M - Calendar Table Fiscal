@@ -18,9 +18,9 @@ let
             type table [FiscalYear = Int64.Type, ExtraWeekPeriod = Int64.Type],
             {
                 {2025, 12},
-                {2026, 12}
+                {2026, 12},
+                {2027, 12}
                 // To include future years, remove the leading // from the rows below:
-                //,{2027, 12}
                 //,{2028, 12}
                 //,{2029, 12}
             }
@@ -203,13 +203,26 @@ let
             type text
         ),
 
-    AddFiscalPeriodName =
+    AddYYQ =
         Table.AddColumn(
             AddFiscalQuarter,
+            "YYQ#",
+            each
+                if [Fiscal Year] = null or [FiscalQuarterNum] = null then
+                    null
+                else
+                    Text.End(Text.From([Fiscal Year]), 2) & "Q" & Text.From([FiscalQuarterNum]),
+            type text
+        ),
+
+    AddFiscalPeriodName =
+        Table.AddColumn(
+            AddYYQ,
             "Fiscal Period Name",
             each if [Fiscal Period] = null then null else "Period " & [Fiscal Period],
             type text
         ),
+
 
     AddPeriodStartRaw =
         Table.AddColumn(
@@ -352,7 +365,6 @@ let
 
     AddFiscalPeriodP = Table.AddColumn(AddFYWW, "Fiscal Period P", each if [Fiscal Period] = null then null else "P" & [Fiscal Period], type text),
     AddFiscalWeekW = Table.AddColumn(AddFiscalPeriodP, "Fiscal Week W", each if [Fiscal Week] = null then null else "W" & [Fiscal Week], type text),
-
     Cleanup =
         Table.RemoveColumns(
             AddFiscalWeekW,
